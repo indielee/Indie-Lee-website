@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+  <parser>
+    <target>./temp</target>
+  </parser>
+  <transformer>
+    <target>./docs</target>
+  </transformer>
+  <files>
+    <directory>.</directory>
+    <ignore>vendor/*</ignore>
+    <ignore>admin/*</ignore>
+    <ignore>build/*</ignore>
+    <ignore>node_modules/*</ignore>
+    <ignore>bower_components/*</ignore>
+  </files>
+</phpdoc>

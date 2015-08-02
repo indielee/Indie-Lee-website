@@ -93,11 +93,42 @@ function homepage_scripts() {
  */
 
 if ( ! function_exists( 'indielee_homepage_bestsellers' ) ) {
+  /**
+   * Display homepage featured Products
+   * Hooked into the `homepage` action in the homepage template
+   * @since  1.0.0
+   * @return void
+   */
+  function indielee_homepage_bestsellers( $args ) {
 
-  function indielee_homepage_bestsellers() {
-    global $indielee;
-    if ( isset( $indielee['homepage-blocks']['enabled']['bestsellers'] ) ) {
-      echo "Bestsellers is enabled!!!";
+    if ( is_woocommerce_activated() ) {
+
+      $args = apply_filters( 'storefront_featured_products_args', array(
+        'limit'       => 4,
+        'columns'       => 4,
+        'orderby'     => 'date',
+        'order'       => 'desc',
+        'title'       => __( 'Featured Products', 'storefront' ),
+        ) );
+
+      echo '<section class="storefront-product-section storefront-featured-products">';
+
+        do_action( 'storefront_homepage_before_featured_products' );
+
+        echo '<h2 class="section-title">' . wp_kses_post( $args['title'] ) . '</h2>';
+
+        echo do_shortcode_func( 'featured_products',
+          array(
+            'per_page'  => intval( $args['limit'] ),
+            'columns' => intval( $args['columns'] ),
+            'orderby' => esc_attr( $args['orderby'] ),
+            'order'   => esc_attr( $args['order'] ),
+            ) );
+
+        do_action( 'storefront_homepage_after_featured_products' );
+
+      echo '</section>';
+
     }
   }
 }

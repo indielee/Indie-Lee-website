@@ -4,3 +4,7 @@ build
 style.css.map
 style.css
 bower_components
+docs
+temp
+
+/vendor/

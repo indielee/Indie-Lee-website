@@ -1,0 +1,13 @@
+{
+    "name": "antonkjorcklinden/indielee",
+    "require": {
+        "phpdocumentor/phpdocumentor": "2.*"
+    },
+    "license": "Private",
+    "authors": [
+        {
+            "name": "Anton Kjörck Lindén",
+            "email": "anton@noviumdesign.se"
+        }
+    ]
+}
