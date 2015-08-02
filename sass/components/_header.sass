@@ -1,0 +1,25 @@
+.site-header
+  border: 0!important
+  margin: 0!important
+  > div
+    +container
+
+.site-branding
+  +span(9 of 12)
+
+.site-header-cart
+  +span(3 of 12 last)
+  position: relative
+
+  &:hover
+    .widget_shopping_cart
+      display: block
+
+  > li
+    text-align: right
+
+  .widget_shopping_cart
+    width: 100%
+    background-color: #FFFFFF
+    display: none
+    position: absolute

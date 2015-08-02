@@ -1,0 +1,21 @@
+{
+  "name": "indielee",
+  "version": "1.0.0",
+  "authors": [
+    "Anton Kjörck Lindén <anton@noviumdesign.se>"
+  ],
+  "description": "E-store for Indie Lee",
+  "license": "Private",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.6.1",
+    "bourbon": "~4.2.3"
+  }
+}
