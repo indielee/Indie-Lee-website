@@ -31,4 +31,3 @@ function do_shortcode_func( $tag, array $atts = array(), $content = null ) {
 }
 
 ?>
-
