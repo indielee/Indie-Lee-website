@@ -153,6 +153,28 @@
         )
     ) );
 
+    Redux::setSection( $opt_name, array(
+        'title' => __( 'Templates', 'indielee-admin' ),
+        'id'    => 'templates',
+        'desc'  => __( 'Shared templete files.', 'indielee-admin' ),
+        'icon'  => 'el el-website-alt'
+    ) );
+
+    Redux::setSection( $opt_name, array(
+        'title'      => __( 'Header', 'indielee-admin' ),
+        'desc'  => __( 'Design elements in the page header.', 'indielee-admin' ),
+        'id'         => 'templates-subsection',
+        'subsection' => true,
+        'fields'     => array(
+            array(
+                'id'       => 'opt-text-shipping',
+                'type'     => 'text',
+                'title'    => __('Text in the header, next to the secondary menu', 'indielee-admin'),
+                'default'  => 'Free domestic shipping with $50 purchaser. Next day delivery.'
+            ),
+        )
+    ) );
+
     /*
      * <--- END SECTIONS
      */
