@@ -3,13 +3,24 @@
   margin: 0!important
   > div
     +container
+    height: em(75px)
 
 .site-branding
-  +span(9 of 12)
+  float: left
+  @include breakpoint($medium-screen)
+    position: static
+    +span(9 of 12)
+    a
+      display: block
+      margin-top: em(19px)
 
 .site-header-cart
-  +span(3 of 12 last)
-  position: relative
+  float: left
+  width: 50px
+  @include breakpoint($medium-screen)
+    +span(3 of 12 last)
+    position: relative
+    line-height: em(75px)
 
   &:hover
     .widget_shopping_cart

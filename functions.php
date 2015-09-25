@@ -136,7 +136,7 @@ function indie_lee_scripts() {
 add_action( 'wp_enqueue_scripts', 'indie_lee_scripts' );
 
 // Disable all woocommerce auto-css. We rely on our own coding skills. #coolness
-// add_filter( 'woocommerce_enqueue_styles', '__return_false' );
+add_filter( 'woocommerce_enqueue_styles', '__return_false' );
 
 /**
  * Tell WooCommerce that we know what we are doing and our theme is configurated to use WooCommerce.
@@ -160,6 +160,16 @@ function my_theme_wrapper_start() {
 function my_theme_wrapper_end() {
   echo '</main';
 }
+
+//remove inline width and height added to images
+	add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
+	add_filter( 'image_send_to_editor', 'remove_thumbnail_dimensions', 10 );
+	// Removes attached image sizes as well
+	add_filter( 'the_content', 'remove_thumbnail_dimensions', 10 );
+	function remove_thumbnail_dimensions( $html ) {
+    		$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
+    		return $html;
+	}
 
 /**
  * Implement the Custom Header feature.

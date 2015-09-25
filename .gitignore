@@ -6,5 +6,6 @@ style.css
 bower_components
 docs
 temp
+*_old
 
 /vendor/
