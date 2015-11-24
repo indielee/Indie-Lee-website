@@ -1,5 +1,14 @@
 // Typography
-$base-font-family: $helvetica;
+
+@font-face {
+  font-family: 'Futura';
+  src: url('../fonts/Futura-Medium.eot');
+  src: url('../fonts/Futura-Medium.woff') format('woff'), url('../fonts/Futura-Medium.ttf') format('truetype'), url('../fonts/Futura-Medium.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$base-font-family: "Futura", $helvetica;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
