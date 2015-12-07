@@ -3,9 +3,15 @@
 }
 
 $susy: (
-  container: em(1200),
+  container: rem(1200),
   columns: 12
 );
 
+.container {
+  @include container;
+  padding: 0 $base-spacing;
+}
+
+$small-screen: em(414);
 $medium-screen: em(640);
 $large-screen: em(860);

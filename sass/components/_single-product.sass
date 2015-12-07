@@ -1,0 +1,11 @@
+.single-product
+  @extend .container
+
+  .summary
+    +span(full)
+
+    +breakpoint($medium-screen)
+      +span(6)
+
+  .related.products
+    +span(full)

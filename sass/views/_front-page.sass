@@ -1,0 +1,60 @@
+.jumbotron
+  @extend .container
+  position: relative
+  background-color: $turqouise
+  margin-bottom: $base-spacing
+
+  .jumbotron-product
+    +span(full)
+    padding: 3em
+
+    +breakpoint($medium-screen)
+      +span(6)
+
+    +breakpoint($large-screen)
+      +span(5)
+
+  .jumbotron-image
+    +span(full)
+    position: relative
+
+    +breakpoint($medium-screen)
+      position: initial
+
+    img
+      display: block
+
+      +breakpoint($medium-screen)
+        +span(6 last)
+        position: absolute
+        bottom: 0
+        right: 0
+
+      +breakpoint($large-screen)
+        +span(7 last)
+
+.storefront-featured-products
+  @extend .container
+  margin-bottom: $base-spacing
+
+.about-section
+  padding: $base-spacing * 3 0
+  background-size: cover
+  background-position: center
+  background-repeat: no-repeat
+
+  .about-text
+    max-width: 90%
+    margin: auto
+    text-align: center
+    color: #fff
+
+    p
+      font-size: $h2-font-size
+      margin-bottom: 0
+
+    +breakpoint($medium-screen)
+      max-width: 75%
+
+    +breakpoint($large-screen)
+      max-width: 55%
