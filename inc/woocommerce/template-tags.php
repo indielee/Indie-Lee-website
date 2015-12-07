@@ -1,11 +1,36 @@
 <?php
-  function indielee_template_custom_field_ingredients() {
-    echo get_post_meta( get_the_ID(), '_ingredients', true );
+
+function indielee_template_custom_field_ingredients() {
+  echo '<div class="product-detail">' . '<h3>Ingredients</h3>' . '<p>' . get_post_meta( get_the_ID(), '_ingredients', true ) . '</p></div>';
+}
+
+function indielee_template_custom_field_directions() {
+  echo '<div class="product-detail">' . '<h3>Directions</h3>' . '<p>' . get_post_meta( get_the_ID(), '_directions', true ) . '</p></div>';
+}
+
+/**
+  * Display product description
+  */
+
+if ( ! function_exists( 'woocommerce_template_product_description' ) ) {
+
+  function woocommerce_template_product_description() {
+    woocommerce_get_template( 'single-product/tabs/description.php' );
   }
 
-  function indielee_template_custom_field_directions() {
-    echo get_post_meta( get_the_ID(), '_directions', true );
+}
+
+/**
+  * Display product description
+  */
+
+if ( ! function_exists( 'woocommerce_template_product_review' ) ) {
+
+  function woocommerce_template_product_review() {
+    comments_template( 'single-product/review.php' );
   }
+
+}
 
 /**
  * Cart Link

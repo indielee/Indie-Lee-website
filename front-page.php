@@ -27,17 +27,18 @@ get_header(); ?>
        */
       do_action( 'homepage' ); ?>
 
-      <section class="about-section" style="background-image:url('http://indielee.dev/wp-content/uploads/2015/12/natural.jpg');">
-        
-        <div class="about-text">
-          <h3>Devoted to making all natural beauty products</h3>
-          <h1>Finest natural ingredients</h1>
-          <p>What you put on your body is just as important as what you put in it. Indie Lee uses all natural ingredients, carefully selected for it's proven effect.</p>
-        </div>
-
-      </section>
-
     </main><!-- #main -->
+
+    <section class="about-section" style="background-image:url('http://indielee.dev/wp-content/uploads/2015/12/natural.jpg');">
+        
+      <div class="about-text">
+        <h3>Devoted to making all natural beauty products</h3>
+        <h1>Finest natural ingredients</h1>
+        <p>What you put on your body is just as important as what you put in it. Indie Lee uses all natural ingredients, carefully selected for it's proven effect.</p>
+      </div>
+
+    </section>
+    
   </div><!-- #primary -->
 
 <?php

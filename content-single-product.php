@@ -54,9 +54,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			 * @hooked woocommerce_template_single_add_to_cart - 30
 			 * @hooked woocommerce_template_single_meta - 40
 			 * @hooked woocommerce_template_single_sharing - 50
-			 * @hooked woocommerce_template_product_description - 60
-			 * @hooked indielee_template_custom_field_ingredients - 65
-			 * @hooked indielee_template_custom_field_directions - 70
 			 */
 			do_action( 'woocommerce_single_product_summary' );
 		?>
@@ -67,7 +64,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		/**
 		 * woocommerce_after_single_product_summary hook
 		 *
-		 * @hooked woocommerce_template_product_review - 5
+		 * @hooked woocommerce_output_product_data_tabs - 10
 		 * @hooked woocommerce_upsell_display - 15
 		 * @hooked woocommerce_output_related_products - 20
 		 */

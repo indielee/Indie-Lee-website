@@ -1,11 +1,56 @@
 .single-product
-  @extend .container
 
   .summary
     +span(full)
 
     +breakpoint($medium-screen)
-      +span(6)
+      +span(7)
+
+    +breakpoint($large-screen)
+      +span(5)
+
+  .images
+    +span(full)
+
+    +breakpoint($medium-screen)
+      +span(5 last)
+
+    +breakpoint($large-screen)
+      +span(7 last)
 
   .related.products
+    +span(full)
+
+  .cart
+    +span(full)
+
+    .quantity
+      float: left
+
+      input
+        width: 100px
+
+    input, button
+      height: 45px
+
+    button
+      float: left
+      background: $turqouise
+      border-color: $turqouise
+      color: #fff
+
+      &:hover,
+      &:focus
+        background: none
+        color: $turqouise
+
+  .product-detail
+    border-bottom: 1px solid $base-border-color
+    margin-bottom: $small-spacing
+
+    &:last-child
+      border-bottom: none
+      margin-bottom: 0
+
+  #reviews
     +span(full)

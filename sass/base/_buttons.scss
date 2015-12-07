@@ -5,6 +5,7 @@ button,
   -webkit-font-smoothing: antialiased;
   border-radius: $base-border-radius;
   border: $base-border;
+  background: none;
   cursor: pointer;
   display: inline-block;
   font-family: $base-font-family;
@@ -21,6 +22,7 @@ button,
   &:focus {
     background-color: $action-color;
     color: #fff;
+    outline: none;
   }
 
   &:disabled {

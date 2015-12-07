@@ -171,6 +171,14 @@ function my_theme_wrapper_end() {
     		return $html;
 	}
 
+// Change breadcrumb separator
+add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_delimiter' );
+function jk_change_breadcrumb_delimiter( $defaults ) {
+	// Change the breadcrumb delimeter from '/' to '>'
+	$defaults['delimiter'] = ' &gt; ';
+	return $defaults;
+}
+
 /**
  * Implement the Custom Header feature.
  */
