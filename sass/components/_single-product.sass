@@ -9,8 +9,19 @@
     +breakpoint($large-screen)
       +span(5)
 
+    h1.product_title
+      font-family: $heading-font-family
+      font-size: $h2-font-size
+
+    .short-description
+      text-transform: uppercase
+
+    .price
+      font-size: $h2-font-size
+
   .images
     +span(full)
+    text-align: center
 
     +breakpoint($medium-screen)
       +span(5 last)
@@ -20,6 +31,8 @@
 
   .related.products
     +span(full)
+    border-top: $thick-border
+    padding-top: $base-spacing
 
   .cart
     +span(full)
@@ -50,17 +63,13 @@
 
     &:last-child
       border-bottom: none
-      margin-bottom: 0
-
-  #reviews
-    +span(full)
+      margin-bottom: 0  
 
 .brand-info-container
   +span(full)
-  border-top: $base-border
+  border-top: $thick-border
   padding-top: $base-spacing
-  margin-top: $small-spacing
-  margin-bottom: $base-spacing
+  margin: $base-spacing 0
 
   .brand-info
     +span(full)
@@ -93,3 +102,4 @@
     background-position: center
     background-size: cover
     background-repeat: no-repeat
+    background-image: url('http://indielee.dev/wp-content/uploads/2015/12/natural.jpg')

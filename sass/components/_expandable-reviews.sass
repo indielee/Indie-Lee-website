@@ -1,0 +1,19 @@
+#reviews
+  #reply-title
+    @extend .button
+    display: inline-block
+
+    &:before
+      content: "\25BA"
+      margin-right: 0.5em
+
+  #commentform
+    display: none
+  
+  .review-form-shown
+    #reply-title
+      &:before
+        content: "\25BC"
+
+    #commentform
+      display: block

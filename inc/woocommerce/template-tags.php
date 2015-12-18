@@ -21,7 +21,7 @@ if ( ! function_exists( 'woocommerce_template_product_description' ) ) {
 }
 
 /**
-  * Display product description
+  * Display product reviews
   */
 
 if ( ! function_exists( 'woocommerce_template_product_review' ) ) {
@@ -31,6 +31,31 @@ if ( ! function_exists( 'woocommerce_template_product_review' ) ) {
   }
 
 }
+
+/**
+  * Dispay brand information
+  */
+
+if ( ! function_exists( 'indielee_template_brand_info' ) ) {
+
+  function indielee_template_brand_info() {
+     echo '<div class="brand-info-container"><div class="brand-info">INDIE LEE is devoted to making all natural beauty products from the WORLD’S FINEST INGREDIENTS. What you put on your body is just as important as what you put in it. We must nurture our soul to let our inner beauty shine through. Live life to its fullest, ONE MOMENT AT A TIME.</div></div>';
+  }
+
+}
+
+/**
+  * Dispay ingredient information
+  */
+
+if ( ! function_exists( 'indielee_template_ingredient_info' ) ) {
+
+  function indielee_template_ingredient_info() {
+     echo '<div class="ingredient-info-container"><div class="ingredient-info"><h2>Derivated Squalane</h2><p>Our face oil is made of 100% pure, olive derived squalane oil that promotes skin elasticity, diminishes age spots, and boosts cell regeneration and oxgenation. One oil bottle contains the squalane from thousands of olivs. Indie Lee does not use animalic squalane.</p></div><div class="ingredient-image"></div></div>';
+  }
+
+}
+
 
 /**
  * Cart Link
