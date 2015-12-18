@@ -54,3 +54,42 @@
 
   #reviews
     +span(full)
+
+.brand-info-container
+  +span(full)
+  border-top: $base-border
+  padding-top: $base-spacing
+  margin-top: $small-spacing
+  margin-bottom: $base-spacing
+
+  .brand-info
+    +span(full)
+    text-align: center
+
+    +breakpoint($medium-screen)
+      +span(8)
+      +push(2)
+
+    +breakpoint($large-screen)
+      +span(6)
+      +push(3)
+
+.ingredient-info-container
+  +span(full)
+  display: table
+  margin-bottom: $base-spacing
+
+  .ingredient-info
+    display: table-cell
+    width: 50%
+    background-color: #000
+    color: #fff
+    text-align: center
+    padding: $base-spacing*6 $base-spacing*2
+
+  .ingredient-image
+    display: table-cell
+    width: 50%
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
