@@ -1,5 +1,84 @@
 footer
   background-color: #000000
   color: #FFFFFF
+  padding: $base-spacing*2 0
+
   > div
     @extend .container
+
+  .footer-navigation
+    +span(12)
+
+    +breakpoint($medium-screen)
+      +span(6)
+
+    .column-third, .column-two-thirds
+      +span(12)
+      margin-bottom: $base-spacing
+
+      +breakpoint($medium-screen)
+        margin: 0
+
+    .column-third
+      +breakpoint($medium-screen)
+        +span(1 of 3)
+
+    .column-two-thirds
+      +breakpoint($medium-screen)
+        +span(2 of 3 last)
+
+      .column-row
+        +clearfix
+        margin-bottom: $base-spacing
+
+        &:last-child
+          margin: 0
+
+        ul
+          +span(1 of 2)
+
+          &:nth-child(2n)
+            +span(1 of 2 last)
+
+          li
+            margin-bottom: em(3px)
+
+    h3
+      margin: 0
+
+  .footer-information
+    +span(12)
+
+    +breakpoint($medium-screen)
+      +span(6 last)
+
+    +breakpoint($large-screen)
+      +span(5)
+
+  .footer-bottom
+    +span(12)
+    margin-top: $base-spacing
+    padding-top: $small-spacing
+    border-top: 1px solid $medium-gray
+
+    .tc-links
+      +span(12)
+
+      +breakpoint($medium-screen)
+        +span(4)
+        +push(2)
+
+    .copyright
+      +span(12)
+
+      +breakpoint($medium-screen)
+        +span(6 last)
+
+  a
+    color: $light-gray
+
+    &:hover
+      color: #FFFFFF
+
+  p, span
+    color: $light-gray
