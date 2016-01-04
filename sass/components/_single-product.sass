@@ -89,17 +89,26 @@
   margin-bottom: $base-spacing
 
   .ingredient-info
-    display: table-cell
-    width: 50%
+    width: 100%
     background-color: #000
     color: #fff
     text-align: center
-    padding: $base-spacing*6 $base-spacing*2
+    padding: $base-spacing*2 $base-spacing*2
+
+    +breakpoint($medium-screen)
+      display: table-cell
+      width: 50%
+      padding: $base-spacing*6 $base-spacing*2
 
   .ingredient-image
-    display: table-cell
-    width: 50%
+    width: 100%
+    min-height: 200px
     background-position: center
     background-size: cover
     background-repeat: no-repeat
     background-image: url('http://indielee.dev/wp-content/uploads/2015/12/natural.jpg')
+
+    +breakpoint($medium-screen)
+      display: table-cell
+      width: 50%
+      min-height: none
