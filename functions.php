@@ -201,7 +201,3 @@ require get_template_directory() . '/inc/structure/template-tags.php';
 require get_template_directory() . '/inc/woocommerce/hooks.php';
 require get_template_directory() . '/inc/woocommerce/functions.php';
 require get_template_directory() . '/inc/woocommerce/template-tags.php';
-
-add_action( 'homepage', 'indielee_homepage_content', 10 );
-add_action( 'indielee_cart', 'indielee_header_cart', 10 );
-add_action( 'wp_footer', 'homepage_scripts', 21 );

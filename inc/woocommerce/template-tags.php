@@ -1,11 +1,27 @@
 <?php
+
+/**
+ * Product ingredients
+ * Display a ingredient list
+ * @return void
+ * @since  1.0.0
+ */
+if ( ! function_exists( 'indielee_template_custom_field_ingredients' ) ) {
   function indielee_template_custom_field_ingredients() {
     echo get_post_meta( get_the_ID(), '_ingredients', true );
   }
-
+}
+/**
+ * Product instruction of usage
+ * Display a instruction of usage
+ * @return void
+ * @since  1.0.0
+ */
+if ( ! function_exists( 'indielee_template_custom_field_directions' ) ) {
   function indielee_template_custom_field_directions() {
     echo get_post_meta( get_the_ID(), '_directions', true );
   }
+}
 
 /**
  * Cart Link
