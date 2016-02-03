@@ -17,6 +17,7 @@ button,
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
+  @include transition(color $base-duration $base-timing, background $base-duration $base-timing);
 
   &:hover,
   &:focus {
@@ -39,6 +40,18 @@ button,
       background: none;
       color: $action-color;
       border: $base-border;
+    }
+  }
+
+  &.cta {
+    background-color: $turqouise;
+    border-color: $turqouise;
+    color: #FFF;
+
+    &:hover,
+    &:focus {
+      background: none;
+      color: $turqouise;
     }
   }
 }

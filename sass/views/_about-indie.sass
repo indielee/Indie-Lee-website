@@ -1,0 +1,64 @@
+.video-hero
+  width: 100%
+  background-image: url('http://indielee.dev/wp-content/uploads/2015/12/natural.jpg')
+  background-position: center
+  background-size: cover
+  padding: $base-spacing*5 0
+  text-align: center
+  margin-bottom: $base-spacing
+
+  .button:first-child
+    margin-bottom: $small-spacing
+
+    +breakpoint($medium-screen)
+      margin-bottom: 0
+
+  label
+    margin: 0
+
+.featured-media
+  background-color: #000
+  padding: $base-spacing
+  margin-bottom: $base-spacing
+  +clearfix
+
+  img
+    +span(6)
+
+    &:nth-child(2n+2)
+      +span(6 last)
+
+    +breakpoint($medium-screen)
+      +span(3)
+
+      &:nth-child(2n+2)
+        +span(3)
+
+      &:nth-child(4n+4)
+        +span(3 last)
+
+.about-indie
+  +span(full)
+  margin-bottom: $base-spacing
+
+  .about-indie-text, .about-indie-image
+    +span(full)
+
+  .about-indie-image
+    margin-bottom: $small-spacing
+
+  +breakpoint($medium-screen)
+
+    .about-indie-text
+      +span(6)
+
+    .about-indie-image
+      +span(6 last)
+      margin-bottom: 0
+
+    &:nth-child(2n+2)
+      .about-indie-text
+        +span(6 last)
+
+      .about-indie-image
+        +span(6)
