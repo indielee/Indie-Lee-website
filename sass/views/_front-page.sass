@@ -1,3 +1,7 @@
+.home .site-main
+  // remove margin so that the jumbotron touches nav
+  margin-top: 0
+
 .jumbotron
   +clearfix
   position: relative
@@ -6,20 +10,24 @@
 
   .jumbotron-product
     +span(full)
-    padding: 3em
+    padding: $base-spacing
+
+    img
+      margin-bottom: $small-spacing
 
     +breakpoint($medium-screen)
       +span(6)
+      padding: $base-spacing*2
 
     +breakpoint($large-screen)
       +span(5)
 
   .jumbotron-image
-    +span(full)
-    position: relative
+    display: none
 
     +breakpoint($medium-screen)
-      position: initial
+      display: block
+      +span(full)
 
     img
       display: block
@@ -50,8 +58,11 @@
     color: #fff
 
     p
-      font-size: $h2-font-size
+      font-size: $h2-font-size*0.85
       margin-bottom: 0
+
+      +breakpoint($medium-screen)
+        font-size: $h2-font-size
 
     +breakpoint($medium-screen)
       max-width: 75%

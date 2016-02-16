@@ -1,3 +1,6 @@
+$menu-stroke-height: 2px
+$menu-stroke-width: 20px
+
 .main-navigation
   clear: both
   display: block
@@ -36,66 +39,123 @@
     margin: 0
     padding-left: 0
 
-    ul
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2)
-      float: left
-      position: absolute
-      top: 1.5em
-      left: -999em
-      z-index: 99999
-
-      ul
-        left: -999em
-        top: 0
-
-      li
-        &:hover > ul,
-        &.focus > ul
-          left: 100%
-
-      a
-        width: 200px
-
-    li:hover > ul,
-    li.focus > ul
-      left: auto
   li
     float: left
     position: relative
 
-    &:hover > a,
-    &.focus > a
-    
-  
   a
     display: block
     text-decoration: none
-  
-
-  .current_page_item > a,
-  .current-menu-item > a,
-  .current_page_ancestor > a
-  
-
 
 /* Small menu. */
-.menu-toggle
-  float: left
-  width: 40px
+@include breakpoint(max-width $medium-screen)
+  .menu-toggle
+    float: left
+    width: 10%
+    margin-top: 28px
+    padding: 0
+    border: 0
+    background: none
+    position: relative
+    height: 10px+$menu-stroke-height*2
+    width: $menu-stroke-width
 
-.menu-toggle,
-.main-navigation.toggled ul
-  display: block
+    &:hover, &:focus
+      background: none
+      outline: none
 
+    &:before
+      content: ""
+      background: #000
+      height: $menu-stroke-height
+      width: $menu-stroke-width
+      position: absolute
+      top: 0
+      left: 0
+      display: block
+      +transition(all linear 0.2s)
 
-@media screen and (min-width: 37.5em)
+    &:after
+      content: ""
+      background: #000
+      height: $menu-stroke-height
+      width: $menu-stroke-width
+      position: absolute
+      top: 10px
+      left: 0
+      display: block
+      +transition(all linear 0.2s)
+
+    &[aria-expanded="true"]
+      &:before
+        transform: rotate(45deg)
+        top: 0
+        width: $menu-stroke-width
+
+      &:after
+        transform: rotate(-45deg)
+        top: 0
+        width: $menu-stroke-width
+
+  .menu-toggle,
+  .main-navigation.toggled ul
+    display: block
+
+    li
+      float: left
+      clear: left
+      margin-bottom: $small-spacing
+
+      &:last-child
+        margin-bottom: 0
+
+      > ul
+        +clearfix
+        display: block
+        margin-top: $small-spacing
+        margin-left: $small-spacing
+
+/* Desktop menu. */
+@include breakpoint($medium-screen)
   .menu-toggle
     display: none
-  
+
   .main-navigation ul
     display: block
-  
 
+    li
+      clear: none
+      margin-bottom: 0
+
+      ul
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2)
+        float: left
+        position: absolute
+        top: 1.5em
+        left: -999em
+        z-index: 99999
+
+        ul
+          left: -999em
+          top: 0
+
+        li
+          &:hover > ul,
+          &.focus > ul
+            left: 100%
+
+        a
+          width: 200px
+
+      li:hover > ul,
+      li.focus > ul
+        left: auto
+        background-color: #ffffff
+        padding: $small-spacing
+        box-shadow: $base-shadow
+
+        a
+          color: $action-color
 
 .comment-navigation,
 .posts-navigation,
@@ -104,16 +164,14 @@
   .site-main &
     margin: 0 0 1.5em
     overflow: hidden
-  
+
 
   & .nav-previous
     float: left
     width: 50%
-  
+
 
   & .nav-next
     float: right
     text-align: right
     width: 50%
-  
-

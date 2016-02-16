@@ -95,5 +95,9 @@
   text-transform: uppercase
   text-align: right
 
-.wc-proceed-to-checkout a
-  @extend button.cta
+.wc-proceed-to-checkout
+  +clearfix
+
+  a
+    @extend button.cta
+    float: right

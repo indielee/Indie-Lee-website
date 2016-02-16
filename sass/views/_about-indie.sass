@@ -1,11 +1,16 @@
 .video-hero
   width: 100%
-  background-image: url('http://indielee.dev/wp-content/uploads/2015/12/natural.jpg')
+  background-image: url('/wp-content/uploads/2016/02/about-indie.jpg')
   background-position: center
   background-size: cover
   padding: $base-spacing*5 0
   text-align: center
   margin-bottom: $base-spacing
+  // "clear float" on buttons
+  white-space: pre-line
+
+  +breakpoint($medium-screen)
+    white-space: normal
 
   .button:first-child
     margin-bottom: $small-spacing
@@ -20,22 +25,26 @@
   background-color: #000
   padding: $base-spacing
   margin-bottom: $base-spacing
+  text-align: center
+  color: #fff
   +clearfix
 
-  img
-    +span(6)
+  .media-logo
+    +gallery(6)
+    padding: 3%
 
-    &:nth-child(2n+2)
-      +span(6 last)
+    &:nth-child(1n+5)
+      display: none
 
     +breakpoint($medium-screen)
-      +span(3)
+      display: table-cell
+      float: none
+      vertical-align: middle
+      width: 10%
+      padding: 1.5%
 
-      &:nth-child(2n+2)
-        +span(3)
-
-      &:nth-child(4n+4)
-        +span(3 last)
+      &:nth-child(1n+5)
+        display: table-cell
 
 .about-indie
   +span(full)

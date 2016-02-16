@@ -11,13 +11,17 @@ button,
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: 1;
-  padding: 0.75em 2em;
+  padding: 0.75em 0.75em;
   text-decoration: none;
   text-transform: uppercase;
   user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   @include transition(color $base-duration $base-timing, background $base-duration $base-timing);
+
+  @include breakpoint($medium-screen) {
+    padding: 0.75em 2em;
+  }
 
   &:hover,
   &:focus {
@@ -34,12 +38,14 @@ button,
   &.inverted {
     background-color: $action-color;
     color: #fff;
+    border-color: $action-color;
 
     &:hover,
     &:focus {
       background: none;
       color: $action-color;
       border: $base-border;
+      border-color: $action-color;
     }
   }
 

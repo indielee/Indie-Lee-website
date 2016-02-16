@@ -1,0 +1,40 @@
+$mini-cart-width: 450px
+
+.widget.woocommerce.widget_shopping_cart
+  box-shadow: $base-shadow
+  padding: $small-spacing
+  z-index: 3
+  right: 0
+  width: $mini-cart-width
+  background-color: #FFFFFF
+  position: absolute
+
+  li.mini_cart_item
+    position: relative
+    padding: $small-spacing 0
+    border-bottom: $base-border
+
+    .remove
+      position: absolute
+      top: 0
+      right: 0
+
+    > a
+      display: inline-block
+
+      img
+        float: left
+        max-width: 70px
+
+      span
+        float: left
+
+  p.total
+    padding: $small-spacing 0
+    border-bottom: $base-border
+    line-height: $base-line-height
+    text-align: right
+
+  p.buttons
+    text-align: right
+    margin: 0

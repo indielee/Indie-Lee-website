@@ -28,10 +28,27 @@ get_header(); ?>
         </div>
 
         <div class="featured-media">
-          <img src="http://indielee.dev/wp-content/uploads/2015/12/flower.png" alt="Media" />
-          <img src="http://indielee.dev/wp-content/uploads/2015/12/flower.png" alt="Media" />
-          <img src="http://indielee.dev/wp-content/uploads/2015/12/flower.png" alt="Media" />
-          <img src="http://indielee.dev/wp-content/uploads/2015/12/flower.png" alt="Media" />
+          <h2>As seen in</h2>
+          <div class="logos-container">
+            <div class="media-logo">
+              <img src="/wp-content/uploads/2016/02/elle.png" alt="Elle" />
+            </div>
+            <div class="media-logo">
+              <img src="/wp-content/uploads/2016/02/metro-mode.png" alt="Metro Mode" />
+            </div>
+            <div class="media-logo">
+              <img src="/wp-content/uploads/2016/02/modette.png" alt="Modette" />
+            </div>
+            <div class="media-logo">
+              <img src="/wp-content/uploads/2016/02/kosmetik.png" alt="Kosmetik" />
+            </div>
+            <div class="media-logo">
+              <img src="/wp-content/uploads/2016/02/bazaar.png" alt="Bazaar" />
+            </div>
+            <div class="media-logo">
+              <img src="/wp-content/uploads/2016/02/vogue.png" alt="Vogue" />
+            </div>
+          </div>
         </div>
 
         <div class="about-indie">

@@ -7,34 +7,71 @@
 
 .site-branding
   float: left
+  width: 70%
+  text-align: center
+  margin-top: em(19px)
+
+  img
+    max-width: 90%
+
   @include breakpoint($medium-screen)
     position: static
     +span(9 of 12)
+    text-align: left
+
+    img
+      max-width: none
+
     a
       display: block
-      margin-top: em(19px)
+
+.widget_shopping_cart
+  display: none
 
 .site-header-cart
   float: left
-  width: 50px
+  width: 15%
+  margin-top: 12px
+
   @include breakpoint($medium-screen)
     +span(3 of 12 last)
     position: relative
+    margin-top: 0
     line-height: em(75px)
 
-  &:hover
-    .widget_shopping_cart
-      display: block
+    &:hover
+      .widget_shopping_cart
+        display: block
 
   > li
     text-align: right
 
-  .widget_shopping_cart
-    width: 100%
-    background-color: #FFFFFF
-    display: none
-    position: absolute
-
   a.cart-contents
+    display: block
     font-size: 14px
     color: black
+    text-align: center
+
+    +breakpoint($medium-screen)
+      text-align: right
+
+    span.cart-text
+      display: none
+
+      +breakpoint($medium-screen)
+        display: inline-block
+
+    .count
+      display: inline-block
+      width: 100%
+
+      +breakpoint($medium-screen)
+        width: auto
+
+    .cart-icon
+      display: inline-block
+      width: 22px
+      height: 22px
+
+      +breakpoint($medium-screen)
+        display: none

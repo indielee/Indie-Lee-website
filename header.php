@@ -22,7 +22,7 @@ global $indielee;
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<div class="first-row">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">=</button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" id="menu-toggle"></button>
 			<div class="site-branding">
 				<?php if ( get_header_image() ) { ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
