@@ -20,12 +20,6 @@ global $indielee;
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<header class="pre-header">
-		<div>
-			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'Top Menu' ) ); ?>
-			<div class="shipping"><?php echo $indielee['opt-text-shipping']; ?></div>
-		</div>
-	</header>
 	<header id="masthead" class="site-header" role="banner">
 		<div class="first-row">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">=</button>
