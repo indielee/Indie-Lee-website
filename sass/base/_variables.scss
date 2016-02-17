@@ -12,6 +12,7 @@ $base-font-family: "Futura", $helvetica;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
+$small-font-size: 0.9em;
 $base-font-size: em(15px);
 $h1-font-size: 2.167em;
 $h2-font-size: 1.583em;
@@ -40,7 +41,8 @@ $action-color: #000;
 
 // Border
 $base-border-color: $base-font-color;
-$base-border: 2px solid $base-border-color;
+$base-border: 1px solid $base-border-color;
+$button-border: 2px solid $base-border-color;
 $thick-border: 5px solid $base-border-color;
 
 // Forms

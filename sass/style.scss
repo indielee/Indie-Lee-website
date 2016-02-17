@@ -17,6 +17,7 @@ Text Domain: Indie Lee
 @import "base/base";
 
 @import "components/navigation/navigation";
+@import "components/pre-header";
 @import "components/header";
 @import "components/layout";
 @import "components/breadcrumbs";
@@ -29,6 +30,7 @@ Text Domain: Indie Lee
 @import "components/shop/expandable-reviews";
 @import "components/shop/cart";
 @import "components/shop/mini-cart";
+@import "components/shop/woocommerce-message";
 
 @import "media/media";
 

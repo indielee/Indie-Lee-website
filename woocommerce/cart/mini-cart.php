@@ -43,15 +43,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 						), $cart_item_key );
 						?>
 						<?php if ( ! $_product->is_visible() ) : ?>
-							<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ) . '<span>' . $product_name . '</span>' . '&nbsp;'; ?>
+							<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ); ?>
+							<div class="product-information">
+								<?php echo '<span class="name">' . $product_name . '</span>'; ?>
+								<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
+							</div>
 						<?php else : ?>
-							<a href="<?php echo esc_url( $_product->get_permalink( $cart_item ) ); ?>">
-								<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ) . '<span>' . $product_name . '</span>' . '&nbsp;'; ?>
+							<a class="product" href="<?php echo esc_url( $_product->get_permalink( $cart_item ) ); ?>">
+								<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ); ?>
+								<div class="product-information">
+									<?php echo '<span class="name">' . $product_name . '</span>'; ?>
+									<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
+								</div>
 							</a>
 						<?php endif; ?>
 						<?php echo WC()->cart->get_item_data( $cart_item ); ?>
-
-						<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
 					</li>
 					<?php
 				}

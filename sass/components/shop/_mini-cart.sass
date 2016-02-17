@@ -1,4 +1,4 @@
-$mini-cart-width: 450px
+$mini-cart-width: 300px
 
 .widget.woocommerce.widget_shopping_cart
   box-shadow: $base-shadow
@@ -10,24 +10,29 @@ $mini-cart-width: 450px
   position: absolute
 
   li.mini_cart_item
+    +clearfix
     position: relative
     padding: $small-spacing 0
     border-bottom: $base-border
 
     .remove
       position: absolute
-      top: 0
+      top: $small-spacing
       right: 0
 
-    > a
-      display: inline-block
+    > a.product
+      +span(full)
 
       img
-        float: left
-        max-width: 70px
+        +span(3)
 
-      span
-        float: left
+      .product-information
+        +span(9 last)
+        line-height: $base-line-height
+
+        .name,
+        .quantity
+          +span(full)
 
   p.total
     padding: $small-spacing 0
@@ -35,6 +40,6 @@ $mini-cart-width: 450px
     line-height: $base-line-height
     text-align: right
 
-  p.buttons
-    text-align: right
-    margin: 0
+  p.buttons .button
+    display: block
+    text-align: center

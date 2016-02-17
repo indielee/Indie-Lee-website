@@ -51,14 +51,13 @@ $menu-stroke-width: 20px
 @include breakpoint(max-width $medium-screen)
   .menu-toggle
     float: left
-    width: 10%
+    width: 15%
     margin-top: 28px
     padding: 0
     border: 0
     background: none
     position: relative
     height: 10px+$menu-stroke-height*2
-    width: $menu-stroke-width
 
     &:hover, &:focus
       background: none
@@ -71,7 +70,8 @@ $menu-stroke-width: 20px
       width: $menu-stroke-width
       position: absolute
       top: 0
-      left: 0
+      left: 50%
+      margin-left: -10px
       display: block
       +transition(all linear 0.2s)
 
@@ -82,7 +82,8 @@ $menu-stroke-width: 20px
       width: $menu-stroke-width
       position: absolute
       top: 10px
-      left: 0
+      left: 50%
+      margin-left: -10px
       display: block
       +transition(all linear 0.2s)
 
