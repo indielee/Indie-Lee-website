@@ -1,11 +1,114 @@
 .single-product
-  @extend .container
 
   .summary
     +span(full)
 
     +breakpoint($medium-screen)
-      +span(6)
+      +span(7)
+
+    +breakpoint($large-screen)
+      +span(5)
+
+    h1.product_title
+      font-family: $heading-font-family
+      font-size: $h2-font-size
+
+    .short-description
+      text-transform: uppercase
+
+    .price
+      font-size: $h2-font-size
+
+  .images
+    +span(full)
+    text-align: center
+
+    +breakpoint($medium-screen)
+      +span(5 last)
+
+    +breakpoint($large-screen)
+      +span(7 last)
 
   .related.products
     +span(full)
+    border-top: $thick-border
+    padding-top: $base-spacing
+
+  .cart
+    +span(full)
+
+    .quantity
+      float: left
+
+      input
+        width: 100px
+
+    input, button
+      height: 45px
+
+    button
+      float: left
+      background: $turqouise
+      border-color: $turqouise
+      color: #fff
+
+      &:hover,
+      &:focus
+        background: none
+        color: $turqouise
+
+  .product-detail
+    border-bottom: 1px solid $base-border-color
+    margin-bottom: $small-spacing
+
+    &:last-child
+      border-bottom: none
+      margin-bottom: 0  
+
+.brand-info-container
+  +span(full)
+  border-top: $thick-border
+  padding-top: $base-spacing
+  margin: $base-spacing 0
+
+  .brand-info
+    +span(full)
+    text-align: center
+
+    +breakpoint($medium-screen)
+      +span(8)
+      +push(2)
+
+    +breakpoint($large-screen)
+      +span(6)
+      +push(3)
+
+.ingredient-info-container
+  +span(full)
+  display: table
+  margin-bottom: $base-spacing
+
+  .ingredient-info
+    width: 100%
+    background-color: #000
+    color: #fff
+    text-align: center
+    padding: $base-spacing*2 $base-spacing*2
+
+    +breakpoint($medium-screen)
+      display: table-cell
+      width: 50%
+      padding: $base-spacing*6 $base-spacing*2
+
+  .ingredient-image
+    width: 100%
+    min-height: 200px
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    background-image: url('http://indielee.dev/wp-content/uploads/2015/12/natural.jpg')
+
+    +breakpoint($medium-screen)
+      display: table-cell
+      width: 50%
+      min-height: none

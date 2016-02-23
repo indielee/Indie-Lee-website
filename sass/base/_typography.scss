@@ -22,7 +22,8 @@ h6 {
 }
 
 h1 {
-  font-size: $h1-font-size
+  font-size: $h1-font-size;
+  margin: 0 0 $small-spacing / 4;
 }
 
 h2 {

@@ -60,23 +60,30 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 			?>
 	</a>
 	<hr>
-		<?php
 
-			/**
-			 * woocommerce_shop_loop_item_title hook
-			 *
-			 * @hooked woocommerce_template_loop_product_title - 10
-			 */
-			do_action( 'woocommerce_shop_loop_item_title' );
+		<div class="product-info">
+		
+			<a href="<?php the_permalink(); ?>">
+				<?php
 
-			/**
-			 * woocommerce_after_shop_loop_item_title hook
-			 *
-			 * @hooked woocommerce_template_loop_rating - 5
-			 * @hooked woocommerce_template_loop_price - 10
-			 */
-			do_action( 'woocommerce_after_shop_loop_item_title' );
-		?>
+					/**
+					 * woocommerce_shop_loop_item_title hook
+					 *
+					 * @hooked woocommerce_template_loop_product_title - 10
+					 */
+					do_action( 'woocommerce_shop_loop_item_title' );
+
+					/**
+					 * woocommerce_after_shop_loop_item_title hook
+					 *
+					 * @hooked woocommerce_template_loop_rating - 5
+					 * @hooked woocommerce_template_loop_price - 10
+					 */
+					do_action( 'woocommerce_after_shop_loop_item_title' );
+				?>
+			</a>
+
+		</div>
 
 	<?php
 

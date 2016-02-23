@@ -129,6 +129,8 @@ function indie_lee_scripts() {
 
 	wp_enqueue_script( 'indie-lee-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
+	wp_enqueue_script( 'indie-lee-script', get_template_directory_uri() . '/js/app.js', array(), '20151218', true );
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -170,6 +172,14 @@ function my_theme_wrapper_end() {
     		$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
     		return $html;
 	}
+
+// Change breadcrumb separator
+add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_delimiter' );
+function jk_change_breadcrumb_delimiter( $defaults ) {
+	// Change the breadcrumb delimeter from '/' to '>'
+	$defaults['delimiter'] = ' &gt; ';
+	return $defaults;
+}
 
 /**
  * Implement the Custom Header feature.

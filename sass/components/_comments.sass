@@ -1,0 +1,52 @@
+#reviews
+  +span(full)
+  padding-bottom: $base-spacing
+
+  .comment-form
+    +clearfix
+
+.commentlist > li
+  margin-bottom: $small-spacing
+  padding-bottom: $small-spacing
+  border-bottom: 1px solid $base-border-color
+
+  &:last-child
+    border-bottom: none
+    padding-bottom: 0
+
+.comment_container
+  +clearfix
+
+  .comment-user
+    +span(full)
+
+    +breakpoint($medium-screen)
+      +span(4)
+
+  .comment-text
+    +span(full)
+
+    +breakpoint($large-screen)
+      +span(8 last)
+
+#review_form
+
+  h3.comment-reply-title
+    font-size: $h2-font-size
+
+  .comment-form-rating
+    +span(full)
+
+    +breakpoint($medium-screen)
+      +span(4)
+
+  .comment-form-comment
+    +span(full)
+    margin: 0
+
+    +breakpoint($medium-screen)
+      +span(8 last)
+
+  .form-submit
+    +span(full)
+    text-align: right
