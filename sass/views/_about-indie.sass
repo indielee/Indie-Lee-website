@@ -1,0 +1,72 @@
+.video-hero
+  width: 100%
+  background-image: url('/wp-content/uploads/2016/02/about-indie.jpg')
+  background-position: center
+  background-size: cover
+  padding: $base-spacing*5 0
+  text-align: center
+  margin-bottom: $base-spacing
+  white-space: pre-line
+
+  +breakpoint($medium-screen)
+    white-space: normal
+
+  .button:first-child
+    margin-bottom: $small-spacing
+
+    +breakpoint($medium-screen)
+      margin-bottom: 0
+
+  label
+    margin: 0
+
+.featured-media
+  background-color: #000
+  padding: $base-spacing
+  margin-bottom: $base-spacing
+  text-align: center
+  color: #fff
+  +clearfix
+
+  .media-logo
+    +gallery(6)
+    padding: 3%
+
+    &:nth-child(1n+5)
+      display: none
+
+    +breakpoint($medium-screen)
+      display: table-cell
+      float: none
+      vertical-align: middle
+      width: 10%
+      padding: 1.5%
+
+      &:nth-child(1n+5)
+        display: table-cell
+
+.about-indie
+  +span(full)
+  margin-bottom: $base-spacing
+
+  .about-indie-text, .about-indie-image
+    +span(full)
+
+  .about-indie-image
+    margin-bottom: $small-spacing
+
+  +breakpoint($medium-screen)
+
+    .about-indie-text
+      +span(6)
+
+    .about-indie-image
+      +span(6 last)
+      margin-bottom: 0
+
+    &:nth-child(2n+2)
+      .about-indie-text
+        +span(6 last)
+
+      .about-indie-image
+        +span(6)

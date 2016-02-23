@@ -43,15 +43,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 						), $cart_item_key );
 						?>
 						<?php if ( ! $_product->is_visible() ) : ?>
-							<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ) . $product_name . '&nbsp;'; ?>
+							<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ); ?>
+							<div class="product-information">
+								<?php echo '<span class="name">' . $product_name . '</span>'; ?>
+								<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
+							</div>
 						<?php else : ?>
-							<a href="<?php echo esc_url( $_product->get_permalink( $cart_item ) ); ?>">
-								<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ) . $product_name . '&nbsp;'; ?>
+							<a class="product" href="<?php echo esc_url( $_product->get_permalink( $cart_item ) ); ?>">
+								<?php echo str_replace( array( 'http:', 'https:' ), '', $thumbnail ); ?>
+								<div class="product-information">
+									<?php echo '<span class="name">' . $product_name . '</span>'; ?>
+									<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
+								</div>
 							</a>
 						<?php endif; ?>
 						<?php echo WC()->cart->get_item_data( $cart_item ); ?>
-
-						<?php echo apply_filters( 'woocommerce_widget_cart_item_quantity', '<span class="quantity">' . sprintf( '%s &times; %s', $cart_item['quantity'], $product_price ) . '</span>', $cart_item, $cart_item_key ); ?>
 					</li>
 					<?php
 				}
@@ -73,8 +79,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php do_action( 'woocommerce_widget_shopping_cart_before_buttons' ); ?>
 
 	<p class="buttons">
-		<a href="<?php echo WC()->cart->get_cart_url(); ?>" class="button wc-forward"><?php _e( 'View Cart', 'woocommerce' ); ?></a>
-		<a href="<?php echo WC()->cart->get_checkout_url(); ?>" class="button checkout wc-forward"><?php _e( 'Checkout', 'woocommerce' ); ?></a>
+		<a href="<?php echo WC()->cart->get_cart_url(); ?>" class="button cta wc-forward"><?php _e( 'View Cart', 'woocommerce' ); ?></a>
 	</p>
 
 <?php endif; ?>

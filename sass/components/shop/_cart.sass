@@ -1,0 +1,103 @@
+.cart
+  +clearfix
+  text-transform: uppercase
+
+  .cart-header
+    display: none
+
+    +breakpoint($medium-screen)
+      +clearfix
+      display: block
+      border-top: 1px solid $medium-gray
+      border-bottom: 1px solid $medium-gray
+      padding: $small-spacing
+
+    .product
+      +span(5)
+
+    .product-price,
+    .product-quantity,
+    .product-subtotal
+      +span(2)
+
+  .cart-body
+    +clearfix
+
+    .product-row
+      +clearfix
+      border-bottom: 1px solid $medium-gray
+      margin-bottom: $small-spacing
+
+      &:last-child
+        border: none
+
+      > div
+        text-align: center
+
+        +breakpoint($medium-screen)
+          display: table-cell
+          vertical-align: middle
+          padding: $small-spacing 0
+          text-align: left
+
+          .mobile-label
+            display: none
+
+      .product-thumbnail
+        +span(full)
+        margin-bottom: $small-spacing
+
+        +breakpoint($medium-screen)
+          float: none
+          width: span(1.5)
+          margin: 0
+
+      .product-name
+        +span(full)
+        margin-bottom: $small-spacing
+
+        +breakpoint($medium-screen)
+          float: none
+          width: span(3.5)
+          margin: 0
+
+      .product-price,
+      .product-quantity,
+      .product-subtotal
+        +span(3.5)
+
+        .amount
+          display: inline-block
+          margin-top: $small-spacing
+
+        +breakpoint($medium-screen)
+          float: none
+          width: span(2)
+
+          .amount
+            margin-top: 0
+
+      .product-remove
+        +span(1.5 last)
+
+        +breakpoint($medium-screen)
+          float: none
+          width: span(1)
+
+      .product-quantity input
+        display: inline-block
+        max-width: 70px
+
+.cart-subtotal
+  background-color: #000
+  padding: $small-spacing
+  color: #fff
+  text-transform: uppercase
+  text-align: right
+
+.wc-proceed-to-checkout
+  +clearfix
+
+  a
+    @extend button.cta
+    float: right

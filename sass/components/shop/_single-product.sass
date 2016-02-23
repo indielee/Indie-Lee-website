@@ -29,6 +29,12 @@
     +breakpoint($large-screen)
       +span(7 last)
 
+    img
+      max-height: 300px
+
+      +breakpoint($medium-screen)
+        max-height: none
+
   .related.products
     +span(full)
     border-top: $thick-border
@@ -48,14 +54,7 @@
 
     button
       float: left
-      background: $turqouise
-      border-color: $turqouise
-      color: #fff
-
-      &:hover,
-      &:focus
-        background: none
-        color: $turqouise
+      @extend button.cta
 
   .product-detail
     border-bottom: 1px solid $base-border-color
@@ -63,7 +62,7 @@
 
     &:last-child
       border-bottom: none
-      margin-bottom: 0  
+      margin-bottom: 0
 
 .brand-info-container
   +span(full)

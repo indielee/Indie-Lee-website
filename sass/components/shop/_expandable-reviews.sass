@@ -2,6 +2,8 @@
   #reply-title
     @extend .button
     display: inline-block
+    white-space: normal
+    line-height: $base-line-height
 
     &:before
       content: "\25BA"
@@ -9,7 +11,7 @@
 
   #commentform
     display: none
-  
+
   .review-form-shown
     #reply-title
       &:before

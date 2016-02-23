@@ -1,10 +1,13 @@
 .pre-header
-  border-bottom: $base-border
-  line-height: em(40px)
+  background-color: lighten($light-gray, 22.5%)
+
   > div
     +container
-  .menu-top-menu-container
-    float: right
-  .shipping
-    float: right
-    margin-right: 1em
+    padding: $small-spacing 1em
+    font-size: $small-font-size
+
+    .menu-top-menu-container
+      float: right
+
+    .shipping
+      float: right

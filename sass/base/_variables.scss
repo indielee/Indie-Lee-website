@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'Futura';
-  src: url('../fonts/Futura-Medium.eot');
-  src: url('../fonts/Futura-Medium.woff') format('woff'), url('../fonts/Futura-Medium.ttf') format('truetype'), url('../fonts/Futura-Medium.svg') format('svg');
+  src: url('./fonts/Futura-Medium.eot');
+  src: url('./fonts/Futura-Medium.woff') format('woff'), url('./fonts/Futura-Medium.ttf') format('truetype'), url('./fonts/Futura-Medium.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -12,6 +12,7 @@ $base-font-family: "Futura", $helvetica;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
+$small-font-size: 0.9em;
 $base-font-size: em(15px);
 $h1-font-size: 2.167em;
 $h2-font-size: 1.583em;
@@ -28,7 +29,7 @@ $base-z-index: 0;
 
 // Colors
 $blue: #477dca;
-$dark-gray: #333;
+$dark-gray: #231F20;
 $medium-gray: #999;
 $light-gray: #BBBABA;
 $turqouise: #9BD3D8;
@@ -36,13 +37,21 @@ $turqouise: #9BD3D8;
 // Font Colors
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
-$action-color: $base-font-color;
+$action-color: #000;
 
 // Border
 $base-border-color: $base-font-color;
-$base-border: 2px solid $base-border-color;
+$base-border: 1px solid $base-border-color;
+$button-border: 2px solid $base-border-color;
 $thick-border: 5px solid $base-border-color;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Transitions
+$base-duration: 0.1s;
+$base-timing: linear;
+
+// Shadows
+$base-shadow: 0 3px 20px rgba(0,0,0,0.16);

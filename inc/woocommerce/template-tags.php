@@ -70,7 +70,8 @@ if ( ! function_exists( 'indielee_cart_link' ) ) {
   function indielee_cart_link() {
     ?>
       <a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'indielee' ); ?>">
-        <?php _e( 'Your order', 'indielee' ); ?> / <span class="count"><?php echo wp_kses_data( sprintf( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'indielee' ), WC()->cart->get_cart_contents_count() ) );?></span>
+        <img class="cart-icon" src="/wp-content/themes/indielee/icons/cart.svg" alt="Cart" />
+        <span class="cart-text"><?php _e( 'Your order', 'indielee' ); ?> /</span><span class="count"><?php echo wp_kses_data( sprintf( _n( ' %d item', ' %d items', WC()->cart->get_cart_contents_count(), 'indielee' ), WC()->cart->get_cart_contents_count() ) );?></span>
       </a>
     <?php
   }

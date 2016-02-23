@@ -20,15 +20,15 @@ global $indielee;
 
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
-	<header class="pre-header">
-		<div>
-			<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'Top Menu' ) ); ?>
-			<div class="shipping"><?php echo $indielee['opt-text-shipping']; ?></div>
-		</div>
-	</header>
 	<header id="masthead" class="site-header" role="banner">
+		<header class="pre-header">
+			<div>
+				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'Top Menu' ) ); ?>
+				<div class="shipping"><?php echo $indielee['opt-text-shipping']; ?></div>
+			</div>
+		</header>
 		<div class="first-row">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">=</button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" id="menu-toggle"></button>
 			<div class="site-branding">
 				<?php if ( get_header_image() ) { ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -54,3 +54,6 @@ global $indielee;
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+
+	<!-- moving messages such as "Product added to cart" from under page title to show it under header instead -->
+	<?php echo wc_print_notices(); ?>

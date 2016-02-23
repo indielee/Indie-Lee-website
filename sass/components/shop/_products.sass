@@ -1,0 +1,23 @@
+.products
+
+  >li
+    +span(12)
+    margin-bottom: $base-spacing
+
+    +breakpoint($small-screen)
+      +gallery(6)
+
+    +breakpoint($medium-screen)
+      +gallery(4)
+      +gutter(no-gutter)
+
+    +breakpoint($large-screen)
+      +gallery(3)
+
+    .thumbnail-container
+      display: block
+      text-align: center
+
+      +breakpoint(max-width $small-screen)
+        img
+          max-height: 150px
