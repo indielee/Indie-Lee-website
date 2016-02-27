@@ -16,6 +16,15 @@
 
     woocommerce_wp_textarea_input(
       array(
+        'id'          => '_ingredients_eu',
+        'label'       => __( 'EU compliant Ingredient list', 'woocommerce' ),
+        'placeholder' => '',
+        'description' => __( 'Enter the full ingredient list here with EU compliant definitions.', 'woocommerce' )
+      )
+    );
+
+    woocommerce_wp_textarea_input(
+      array(
         'id'          => '_directions',
         'label'       => __( 'Directions of usage', 'woocommerce' ),
         'placeholder' => '',
@@ -30,10 +39,14 @@
   function indielee_custom_general_fields_save( $post_id ) {
 
     $ingredient_list = $_POST['_ingredients'];
+    $eu_ingredient_list = $_POST['_ingredients_eu'];
     $directions = $_POST['_directions'];
 
     if( !empty( $ingredient_list ) )
       update_post_meta( $post_id, '_ingredients', esc_html( $ingredient_list ) );
+
+    if( !empty( $eu_ingredient_list ) )
+      update_post_meta( $post_id, '_ingredients_eu', esc_html( $eu_ingredient_list ) );
 
     if( !empty( $directions ) )
       update_post_meta( $post_id, '_directions', esc_html( $directions ) );
