@@ -9,7 +9,7 @@ function indielee_template_custom_field_eu_ingredients() {
 }
 
 function indielee_template_custom_field_directions() {
-  echo '<div class="product-detail">' . '<h3>Directions</h3>' . '<p>' . get_post_meta( get_the_ID(), '_directions', true ) . '</p></div>';
+  echo '<div class="product-detail">' . '<h3 id="directions-title">Directions</h3>' . '<div id="directions-content"><p>' . get_post_meta( get_the_ID(), '_directions', true ) . '</p></div></div>';
 }
 
 /**

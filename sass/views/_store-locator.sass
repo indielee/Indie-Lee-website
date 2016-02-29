@@ -5,16 +5,16 @@
   .store-locator-column
     +span(full)
 
+    +breakpoint($small-screen)
+      +gallery(6)
+
     +breakpoint($medium-screen)
-      +span(4)
+      +gallery(4)
       border-top: $thick-border
       padding-top: $base-spacing
 
     +breakpoint($large-screen)
-      +span(3)
-
-      &:last-child
-        +span(3 last)
+      +gallery(3)
 
     .store
       margin-bottom: $base-spacing

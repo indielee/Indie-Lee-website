@@ -5,6 +5,9 @@
     border-bottom: $thick-border
     margin-bottom: $base-spacing
 
+    +breakpoint($small-screen)
+      +gallery(6)
+
     +breakpoint($medium-screen)
       +gallery(4)
 
