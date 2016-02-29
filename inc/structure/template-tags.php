@@ -4,86 +4,51 @@
  * Custom template tags for this theme.
  */
 
-if ( ! function_exists( 'indielee_homepage_content' ) ) {
+if ( ! function_exists( 'indielee_homepage_jumbotron' ) ) {
 	/**
-	 * Display homepage content
+	 * Display homepage jumbotron
 	 * Hooked into the `homepage` action in the homepage template
-   * @uses indielee_homepage_slider(); indielee_homepage_bestsellers();
 	 * @since  1.0.0
 	 * @return  void
 	 */
-	function indielee_homepage_content() {
+	function indielee_homepage_jumbotron() {
     global $indielee;
-    $layout = $indielee['homepage-blocks']['enabled'];
+    $product_img = $indielee['opt-media-jumbotron-product']['thumbnail'];
+    $secondary_img = $indielee['opt-media-jumbotron-secondary-image']['thumbnail'];
+    $product_header = $indielee['opt-text-jumbotron-header'];
+    $product_description = $indielee['opt-textarea-jumbotron-description'];
+    ?>
 
-    if ($layout): foreach ($layout as $key=>$value) {
+    <section class="jumbotron">
 
-        switch($key) {
+      <?php var_dump($secondary_img) ?>
 
-            case 'slider': indielee_homepage_slider();
-            break;
+      <div class="jumbotron-product">
+        <?php if( !empty($product_img) ): ?>
+            <img src="<?php echo $product_img; ?>" class="attachment-shop_catalog wp-post-image" alt="brighteningcleanser_1">
+        <?php endif; ?>
 
-            case 'bestsellers': indielee_homepage_bestsellers();
-            break;
+        <?php if( !empty($product_header) ): ?>
+            <h3><?php echo "$product_header"; ?></h3>
+        <?php endif; ?>   
 
-        }
-    }
-    endif;
-	}
-}
+        <?php if( !empty($product_description) ): ?>
+            <p><?php echo "$product_description"; ?></p>
+        <?php endif; ?>  
 
-/**
- * Display homepage image slider
- * @since  1.0.0
- * @return  void
- */
+        <a href="#" class="button inverted">Explore</a>
+      </div>
 
-if ( ! function_exists( 'indielee_homepage_slider' ) ) {
-
-  function indielee_homepage_slider() {
-    global $indielee;
-    if ( isset( $indielee['homepage-blocks']['enabled']['slider'] ) ) {
-      if ( isset( $indielee['opt-slides-frontpage-slider'] ) && !empty( $indielee['opt-slides-frontpage-slider'] ) ) {
-          // echo 'Slide 1 Title: '         . $indielee['opt-slides-frontpage-slider'][0]['title'];
-          // echo 'Slide 1 Description: '   . $indielee['opt-slides-frontpage-slider'][0]['description'];
-          // echo 'Slide 1 URL: '           . $indielee['opt-slides-frontpage-slider'][0]['url'];
-          // echo 'Slide 1 Attachment ID: ' . $indielee['opt-slides-frontpage-slider'][0]['attachment_id'];
-          // echo 'Slide 1 Thumb: '         . $indielee['opt-slides-frontpage-slider'][0]['thumb'];
-          // echo 'Slide 1 Image: '         . $indielee['opt-slides-frontpage-slider'][0]['image'];
-          // echo 'Slide 1 Width: '         . $indielee['opt-slides-frontpage-slider'][0]['width'];
-          // echo 'Slide 1 Height: '        . $indielee['opt-slides-frontpage-slider'][0]['height'];
-        ?>
-        <div class="frontpage-slider">
-            <?php
-            foreach ($indielee['opt-slides-frontpage-slider'] as $slide) { ?>
-              <div class="slide" style="background-image: <?php $slide['image'] ?>">
-                <?php $slide['title'];
-                $slide['description']; ?>
-              </div>
-            <?php }
-            ?>
+      <?php if( isset($_POST['secondary_img']) && !empty($secondary_img) ): ?>
+        <div class="jumbotron-image">
+          <img src="<?php echo $secondary_img; ?>">
         </div>
-        <?php
-      }
-    }
-  }
+      <?php endif; ?>  
+
+    </section>
+	<?php }
 }
 
-/**
- * Display inline activation scripts for the frontpage if it's needed.
- * @since  1.0.0
- * @return  void
- */
-
-function homepage_scripts() {
-  if ( is_front_page() && isset( $indielee['opt-slides-frontpage-slider'] ) && !empty( $indielee['opt-slides-frontpage-slider'] ) ) { ?>
-  <script>
-    $(document).ready(function(){
-      $('.frontpage-slider').owlCarousel();
-    });
-  </script>
-<?php }
-}
 
 /**
  * Display bestsellers
@@ -93,12 +58,7 @@ function homepage_scripts() {
  */
 
 if ( ! function_exists( 'indielee_homepage_bestsellers' ) ) {
-  /**
-   * Display homepage featured Products
-   * Hooked into the `homepage` action in the homepage template
-   * @since  1.0.0
-   * @return void
-   */
+
   function indielee_homepage_bestsellers() {
 
     if ( is_woocommerce_activated() ) {
@@ -119,6 +79,30 @@ if ( ! function_exists( 'indielee_homepage_bestsellers' ) ) {
 
     }
   }
+}
+
+/**
+ * Display about section
+ * Hooked into the `homepage` action in the homepage template
+ * @since  1.0.0
+ * @return  void
+ */
+
+if ( ! function_exists( 'indielee_homepage_about' ) ) {
+
+  function indielee_homepage_about() { ?>
+
+      <section class="about-section" style="background-image:url('http://indielee.dev/wp-content/uploads/2015/12/natural.jpg');">
+        
+        <div class="about-text">
+          <h3>Devoted to making all natural beauty products</h3>
+          <h1>Finest natural ingredients</h1>
+          <p>What you put on your body is just as important as what you put in it. Indie Lee uses all natural ingredients, carefully selected for it's proven effect.</p>
+        </div>
+
+      </section>
+
+  <?php }
 }
 
 ?>

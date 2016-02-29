@@ -84,17 +84,35 @@
      */
 
     Redux::setSection( $opt_name, array(
-        'title'  => __( 'Basic Field', 'indielee-admin' ),
+        'title'  => __( 'Jumbotron', 'indielee-admin' ),
         'id'     => 'basic',
-        'desc'   => __( 'Basic field with no subsections.', 'indielee-admin' ),
+        'desc'   => __( 'Settings for the jumbotron', 'indielee-admin' ),
         'icon'   => 'el el-home',
         'fields' => array(
             array(
-                'id'       => 'opt-text',
+                'id'       => 'opt-media-jumbotron-product',
+                'type'     => 'media', 
+                'url'      => true,
+                'title'    => __('Jumbotron product image', 'indielee-admin'),
+                'desc'     => __('Image used on the left side of the jumbotron.', 'indielee-admin')
+            ),
+            array(
+                'id'       => 'opt-text-jumbotron-header',
                 'type'     => 'text',
-                'title'    => __( 'Example Text', 'indielee-admin' ),
-                'desc'     => __( 'Example description.', 'indielee-admin' ),
-                'subtitle' => __( 'Example subtitle.', 'indielee-admin' ),
+                'title'    => __( 'Header for jumbotron', 'indielee-admin' )
+            ),
+            array(
+                'id'       => 'opt-textarea-jumbotron-description',
+                'type'     => 'textarea', 
+                'url'      => true,
+                'title'    => __('Jumbotron description', 'indielee-admin'),
+            ),
+            array(
+                'id'       => 'opt-media-jumbotron-secondary-image',
+                'type'     => 'media', 
+                'url'      => true,
+                'title'    => __('Jumbotron secondary image', 'indielee-admin'),
+                'desc'     => __('Image used on the right side of the jumbotron.', 'indielee-admin')
             )
         )
     ) );
@@ -104,53 +122,6 @@
         'id'    => 'basic',
         'desc'  => __( 'Basic fields as subsections.', 'indielee-admin' ),
         'icon'  => 'el el-home'
-    ) );
-
-    Redux::setSection( $opt_name, array(
-        'title'      => __( 'Layout', 'indielee-admin' ),
-        'desc'  => __( 'Drag and drop the elements to arrange your home page.', 'indielee-admin' ),
-        'id'         => 'opt-text-subsection',
-        'subsection' => true,
-        'fields'     => array(
-            array(
-                'id'      => 'homepage-blocks',
-                'type'    => 'sorter',
-                'title'   => 'Homepage Layout Manager',
-                'desc'    => 'Organize how you want the layout to appear on the homepage',
-                'options' => array(
-                    'enabled'  => array(
-                        'responsive-header' => 'Responsive header',
-                        'about'   => 'About Indie Lee',
-                        'bestsellers' => 'Bestsellers'
-                    ),
-                    'disabled' => array(
-                        'slider' => 'Slider',
-                        'static-header'     => 'Static header image'
-                    )
-                ),
-            ),
-        )
-    ) );
-
-    Redux::setSection( $opt_name, array(
-        'title'      => __( 'Image slider', 'indielee-admin' ),
-        'desc'       => __( 'For full documentation on this field, visit: ', 'indielee-admin' ) . '<a href="http://docs.reduxframework.com/core/fields/textarea/" target="_blank">http://docs.reduxframework.com/core/fields/textarea/</a>',
-        'id'         => 'opt-textarea-subsection',
-        'subsection' => true,
-        'fields'     => array(
-            array(
-                'id'          => 'opt-slides-frontpage-slider',
-                'type'        => 'slides',
-                'title'       => __('Slides Options', 'indielee-admin'),
-                'subtitle'    => __('Unlimited slides with drag and drop sortings.', 'indielee-admin'),
-                'desc'        => __('This field will store all slides values into a multidimensional array to use into a foreach loop.', 'indielee-admin'),
-                'placeholder' => array(
-                    'title'           => __('This is a title', 'indielee-admin'),
-                    'description'     => __('Description Here', 'indielee-admin'),
-                    'url'             => __('Give us a link!', 'indielee-admin'),
-                ),
-            ),
-        )
     ) );
 
     Redux::setSection( $opt_name, array(

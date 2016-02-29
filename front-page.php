@@ -23,7 +23,9 @@ get_header(); ?>
 
       <?php
       /**
-       * @hooked indielee_homepage_content - 10
+       * @hooked indielee_homepage_jumbotron -10
+       * @hooked indielee_homepage_bestsellers - 20
+       * @hooked indielee_homepage_about - 30
        */
       do_action( 'homepage' ); ?>
 

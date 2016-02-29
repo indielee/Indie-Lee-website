@@ -4,6 +4,10 @@ function indielee_template_custom_field_ingredients() {
   echo '<div class="product-detail">' . '<h3>Ingredients</h3>' . '<p>' . get_post_meta( get_the_ID(), '_ingredients', true ) . '</p></div>';
 }
 
+function indielee_template_custom_field_eu_ingredients() {
+  echo '<div class="eu-compliant-ingredient-list">' . '<p>' . get_post_meta( get_the_ID(), '_ingredients_eu', true ) . '</p></div>';
+}
+
 function indielee_template_custom_field_directions() {
   echo '<div class="product-detail">' . '<h3>Directions</h3>' . '<p>' . get_post_meta( get_the_ID(), '_directions', true ) . '</p></div>';
 }
@@ -45,8 +49,9 @@ if ( ! function_exists( 'indielee_template_brand_info' ) ) {
 }
 
 /**
-  * Dispay ingredient information
-  */
+* Dispay ingredient information
+* @since  1.0.0
+*/
 
 // Information about the main ingredient (black block with image under the product infomration)
 if ( ! function_exists( 'indielee_template_ingredient_info' ) ) {

@@ -7,5 +7,6 @@ bower_components
 docs
 temp
 *_old
+*.orig
 
 /vendor/
