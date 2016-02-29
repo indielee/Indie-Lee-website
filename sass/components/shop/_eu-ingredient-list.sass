@@ -1,0 +1,20 @@
+#eu-ingredients-title
+  @extend .button
+  display: block
+  text-align: center
+  margin-bottom: $small-spacing
+
+  &:before
+    content: "\25BA"
+    margin-right: 0.5em
+
+#eu-ingredients-list
+  @extend .product-detail
+  display: none
+
+.eu-ingredients-list-shown
+  #eu-ingredients-title:before
+    content: "\25BC"
+
+  #eu-ingredients-list
+    display: block

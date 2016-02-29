@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  var expanderTrigger = document.getElementById("reply-title");
-  var expanderContent = document.getElementById("commentform");
+  var reviewTrigger = document.getElementById("reply-title");
+  var reviewContent = document.getElementById("commentform");
 
-  $(expanderTrigger).click(function(){
+  $(reviewTrigger).click(function(){
     $(this).parent().toggleClass("review-form-shown");
   });
 });

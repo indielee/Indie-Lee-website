@@ -39,16 +39,29 @@
 // } )( jQuery );
 
 
+/* -------- js/expandable-ingredient-list.js -------- */ 
+
+$(document).ready(function() {
+  var ingredientListTrigger = document.getElementById("eu-ingredients-title");
+  var ingredientListContent = document.getElementById("eu-ingredients-list");
+
+  $(ingredientListTrigger).click(function(){
+    $(this).parent().toggleClass("eu-ingredients-list-shown");
+  });
+});
+
+
 /* -------- js/expandable-reviews.js -------- */ 
 
 $(document).ready(function() {
-  var expanderTrigger = document.getElementById("reply-title");
-  var expanderContent = document.getElementById("commentform");
+  var reviewTrigger = document.getElementById("reply-title");
+  var reviewContent = document.getElementById("commentform");
 
-  $(expanderTrigger).click(function(){
+  $(reviewTrigger).click(function(){
     $(this).parent().toggleClass("review-form-shown");
   });
 });
+
 
 /* -------- js/navigation.js -------- */ 
 

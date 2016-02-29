@@ -5,7 +5,7 @@ function indielee_template_custom_field_ingredients() {
 }
 
 function indielee_template_custom_field_eu_ingredients() {
-  echo '<div class="eu-compliant-ingredient-list">' . '<p>' . get_post_meta( get_the_ID(), '_ingredients_eu', true ) . '</p></div>';
+  echo '<h3 id="eu-ingredients-title">EU Compliant ingredients list</h3>' . '<div class="eu-compliant-ingredient-list" id="eu-ingredients-list">' . '<p>' . get_post_meta( get_the_ID(), '_ingredients_eu', true ) . '</p></div>';
 }
 
 function indielee_template_custom_field_directions() {
