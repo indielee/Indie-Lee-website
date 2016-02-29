@@ -9,14 +9,14 @@ get_header(); ?>
       <section class="jumbotron">
 
         <div class="jumbotron-product">
-          <img src="http://indielee.dev/wp-content/uploads/2015/09/brighteningcleanser_1-300x300.jpg" class="attachment-shop_catalog wp-post-image" alt="brighteningcleanser_1">
+          <img src="/wp-content/uploads/2015/09/brighteningcleanser_1-300x300.jpg" class="attachment-shop_catalog wp-post-image" alt="brighteningcleanser_1">
           <h3>Calendula Eye Balm</h3>
           <p>A gentle and effective facial cleanser that REMOVES MAKEUP and impurities while MOISTURIZING THE SKIN.</p>
           <a href="#" class="button inverted">Explore</a>
         </div>
 
         <div class="jumbotron-image">
-          <img src="http://indielee.dev/wp-content/uploads/2015/12/flower.png">
+          <img src="/wp-content/uploads/2015/12/flower.png">
         </div>
 
       </section>
@@ -29,8 +29,8 @@ get_header(); ?>
 
     </main><!-- #main -->
 
-    <section class="about-section" style="background-image:url('http://indielee.dev/wp-content/uploads/2015/12/natural.jpg');">
-        
+    <section class="about-section" style="background-image:url('/wp-content/uploads/2015/12/natural.jpg');">
+
       <div class="about-text">
         <h3>Devoted to making all natural beauty products</h3>
         <h1>Finest natural ingredients</h1>
@@ -38,7 +38,7 @@ get_header(); ?>
       </div>
 
     </section>
-    
+
   </div><!-- #primary -->
 
 <?php

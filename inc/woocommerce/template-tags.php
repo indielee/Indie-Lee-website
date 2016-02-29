@@ -48,6 +48,7 @@ if ( ! function_exists( 'indielee_template_brand_info' ) ) {
   * Dispay ingredient information
   */
 
+// Information about the main ingredient (black block with image under the product infomration)
 if ( ! function_exists( 'indielee_template_ingredient_info' ) ) {
 
   function indielee_template_ingredient_info() {
