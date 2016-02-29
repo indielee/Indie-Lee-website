@@ -1,0 +1,27 @@
+.press-posts-container
+  +span(full)
+
+  .press-post
+    border-bottom: $thick-border
+    margin-bottom: $base-spacing
+
+    +breakpoint($medium-screen)
+      +gallery(4)
+
+    +breakpoint($large-screen)
+      +gallery(3)
+
+    img
+      margin-bottom: $small-spacing
+
+.press-image
+  +span(full)
+
+  +breakpoint($medium-screen)
+    +span(4)
+
+.press-article
+  +span(full)
+
+  +breakpoint($medium-screen)
+    +span(8 last)

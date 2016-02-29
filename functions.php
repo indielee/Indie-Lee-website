@@ -92,6 +92,25 @@ function indie_lee_content_width() {
 }
 add_action( 'after_setup_theme', 'indie_lee_content_width', 0 );
 
+// Create custom posts type for press
+function create_post_type() {
+
+	$labels = array(
+		'name' => 'Press',
+		'singular_name' => 'Press'
+	);
+
+	$args = array(
+		'labels' => $labels,
+		'public' => true,
+		'has_archive' => true,
+		'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+		'rewrite' => array("slug" => "press")
+	);
+	register_post_type('press',$args);
+}
+add_action('init', 'create_post_type');
+
 /**
  * Register widget area.
  *
@@ -172,6 +191,9 @@ function my_theme_wrapper_end() {
     		$html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
     		return $html;
 	}
+
+// Add press image sizes
+add_image_size( 'press_size', 400, 600,  array( 'center', 'top' ) );
 
 // Change breadcrumb separator
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_delimiter' );

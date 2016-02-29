@@ -1,0 +1,30 @@
+.store-locator-container
+  +span(full)
+  margin-top: $base-spacing
+
+  .store-locator-column
+    +span(full)
+
+    +breakpoint($medium-screen)
+      +span(4)
+      border-top: $thick-border
+      padding-top: $base-spacing
+
+    +breakpoint($large-screen)
+      +span(3)
+
+      &:last-child
+        +span(3 last)
+
+    .store
+      margin-bottom: $base-spacing
+
+      h3
+        margin-bottom: 0
+
+      a
+        color: $turqouise
+
+        &:hover,
+        &:focus
+          color: darken($turqouise, 20%)
