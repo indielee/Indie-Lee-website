@@ -9,14 +9,14 @@ get_header(); ?>
       <section class="jumbotron">
 
         <div class="jumbotron-product">
-          <img src="/wp-content/uploads/2015/09/brighteningcleanser_1-300x300.jpg" class="attachment-shop_catalog wp-post-image" alt="brighteningcleanser_1">
-          <h3>Calendula Eye Balm</h3>
-          <p>A gentle and effective facial cleanser that REMOVES MAKEUP and impurities while MOISTURIZING THE SKIN.</p>
+          <img src="/wp-content/uploads/2016/03/SqualaneOil_Yellow.jpg" class="attachment-shop_catalog wp-post-image" alt="SqualaneOil_Yellow">
+          <h3>Squalane Facial Oil</h3>
+          <p>En återfuktande olja utvunnen ur oliver.</p>
           <a href="#" class="button inverted">Explore</a>
         </div>
 
         <div class="jumbotron-image">
-          <img src="/wp-content/uploads/2015/12/flower.png">
+          <img src="/wp-content/uploads/2016/03/SqualaneOil_Yellow.jpg">
         </div>
 
       </section>

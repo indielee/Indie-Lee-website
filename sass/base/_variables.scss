@@ -1,25 +1,22 @@
 // Typography
 
-@font-face {
-  font-family: 'Futura';
-  src: url('./fonts/Futura-Medium.eot');
-  src: url('./fonts/Futura-Medium.woff') format('woff'), url('./fonts/Futura-Medium.ttf') format('truetype'), url('./fonts/Futura-Medium.svg') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
-$base-font-family: "Futura", $helvetica;
+$base-font-family: "futura-pt", $helvetica;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
 $small-font-size: 0.9em;
-$base-font-size: em(15px);
+$base-font-size: 1em;
 $h1-font-size: 2.167em;
 $h2-font-size: 1.583em;
 
+// Font-weights
+$light-font-weight: 400;
+$base-font-weight: 500;
+$bold-font-weight: 700;
+
 // Line height
-$base-line-height: 1.5;
-$heading-line-height: 1.2;
+$base-line-height: 1.45;
+$heading-line-height: 1.1;
 
 // Other Sizes
 $base-border-radius: 0;

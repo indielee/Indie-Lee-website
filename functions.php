@@ -143,6 +143,7 @@ function indie_lee_scripts() {
 		wp_enqueue_script( 'indie-lee-slider', get_template_directory_uri() . '/js/vendor/owl.carousel.js', array(), '2.0.0-beta.2.4', true );
   }
 
+	wp_enqueue_script( 'theme_typekit', 'https://use.typekit.net/eqx1bbn.js');
 
 	wp_enqueue_script( 'indie-lee-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
@@ -155,6 +156,19 @@ function indie_lee_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'indie_lee_scripts' );
+
+/**
+ * TypeKit Font
+ *
+ * @since Theme 1.0
+ */
+
+function theme_typekit_inline() {
+  if ( wp_script_is( 'theme_typekit', 'done' ) ) { ?>
+  	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<?php }
+}
+add_action( 'wp_head', 'theme_typekit_inline' );
 
 // Disable all woocommerce auto-css. We rely on our own coding skills. #coolness
 add_filter( 'woocommerce_enqueue_styles', '__return_false' );

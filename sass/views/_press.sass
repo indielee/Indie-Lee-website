@@ -4,6 +4,7 @@
   .press-post
     border-bottom: $thick-border
     margin-bottom: $base-spacing
+    +transition(opacity $base-duration $base-timing)
 
     +breakpoint($small-screen)
       +gallery(6)
@@ -14,6 +15,9 @@
     +breakpoint($large-screen)
       +gallery(3)
 
+    &:hover
+      opacity: 0.75
+
     img
       margin-bottom: $small-spacing
 
@@ -21,10 +25,10 @@
   +span(full)
 
   +breakpoint($medium-screen)
-    +span(4)
+    +span(4 last)
 
 .press-article
   +span(full)
 
   +breakpoint($medium-screen)
-    +span(8 last)
+    +span(8)

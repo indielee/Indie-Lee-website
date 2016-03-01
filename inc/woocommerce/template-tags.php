@@ -1,11 +1,7 @@
 <?php
 
 function indielee_template_custom_field_ingredients() {
-  echo '<div class="product-detail">' . '<h3>Ingredients</h3>' . '<p>' . get_post_meta( get_the_ID(), '_ingredients', true ) . '</p></div>';
-}
-
-function indielee_template_custom_field_eu_ingredients() {
-  echo '<h3 id="eu-ingredients-title">EU Compliant ingredients list</h3>' . '<div class="eu-compliant-ingredient-list" id="eu-ingredients-list">' . '<p>' . get_post_meta( get_the_ID(), '_ingredients_eu', true ) . '</p></div>';
+  echo '<div class="product-detail" id="ingredients-container">' . '<h3>Ingredients</h3>' . '<p>' . get_post_meta( get_the_ID(), '_ingredients', true ) . ' <span id="eu-ingredients-title">Visa INCI-namn</span>' . '</p>'  . '<div class="eu-compliant-ingredient-list" id="eu-ingredients-list">' . '<p>' . get_post_meta( get_the_ID(), '_ingredients_eu', true ) . '</p></div></div>';
 }
 
 function indielee_template_custom_field_directions() {
