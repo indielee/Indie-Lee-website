@@ -5,9 +5,13 @@
     +container
     padding: $small-spacing 1em
     font-size: $small-font-size
+    text-align: center
 
-    .menu-top-menu-container
-      float: right
+    +breakpoint($medium-screen)
+      text-align: left
 
-    .shipping
-      float: right
+      .menu-top-menu-container
+        float: right
+
+      .shipping
+        float: right

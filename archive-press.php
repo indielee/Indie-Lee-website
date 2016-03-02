@@ -24,7 +24,13 @@ get_header(); ?>
       <?php /* Start the Loop */ ?>
 
       <div class="press-posts-container">
-  			<?php while ( have_posts() ) : the_post(); ?>
+
+  			<?php
+
+					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
+					query_posts( $query_string .'&posts_per_page=12&paged=' . $paged );
+
+					while ( have_posts() ) : the_post(); ?>
 
           <div class="press-post">
 
