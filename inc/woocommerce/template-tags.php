@@ -39,9 +39,7 @@ if ( ! function_exists( 'woocommerce_template_product_review' ) ) {
 if ( ! function_exists( 'indielee_template_optional_field' ) ) {
 
   function indielee_template_optional_field() {
-     echo '<div class="optional-field-container">
-            <div class="text-content">' . get_post_meta( get_the_ID(), '_optional_field', true ) . '</div>
-          </div>';
+     echo '<div class="optional-field-container">' . html_entity_decode( get_post_meta( get_the_ID(), '_optional_field', true ) ) . '</div>';
   }
 
 }

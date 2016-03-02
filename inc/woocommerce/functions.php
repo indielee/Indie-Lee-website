@@ -36,8 +36,8 @@
       array(
         'id'          => '_optional_field',
         'label'       => __( 'Optional field', 'woocommerce' ),
-        'placeolder'  => 'Content should be HTML formatted',
-        'description' => __( 'Optional field that could be used for any purpose', 'woocommerce' )
+        'placeolder'  => '',
+        'description' => __( 'Optional field that could be used for any purpose, should be HTML formatted.', 'woocommerce' )
       )
     );
 
