@@ -50,14 +50,14 @@ button,
   }
 
   &.cta {
-    background-color: $turqouise;
-    border-color: $turqouise;
+    background-color: $secondary-action-color;
+    border-color: $secondary-action-color;
     color: #FFF;
 
     &:hover,
     &:focus {
       background: none;
-      color: $turqouise;
+      color: $secondary-action-color;
     }
   }
 }

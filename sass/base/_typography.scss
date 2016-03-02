@@ -65,3 +65,12 @@ picture {
   margin: 0;
   max-width: 100%;
 }
+
+// clip screen-reader-text (same as wordpress core)
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
