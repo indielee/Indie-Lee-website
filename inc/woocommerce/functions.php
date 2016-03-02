@@ -32,6 +32,42 @@
       )
     );
 
+    woocommerce_wp_textarea_input(
+      array(
+        'id'          => '_optional_field',
+        'label'       => __( 'Optional field', 'woocommerce' ),
+        'placeolder'  => 'Content should be HTML formatted',
+        'description' => __( 'Optional field that could be used for any purpose', 'woocommerce' )
+      )
+    );
+
+    woocommerce_wp_textarea_input(
+      array(
+        'id'          => '_main_ingredient_title',
+        'label'       => __( 'Main ingredient title', 'woocommerce' ),
+        'placeolder'  => '',
+        'description' => __( 'Enter main ingredient title.', 'woocommerce' )
+      )
+    );
+
+    woocommerce_wp_textarea_input(
+      array(
+        'id'          => '_main_ingredient_info',
+        'label'       => __( 'Main ingredient information', 'woocommerce' ),
+        'placeolder'  => '',
+        'description' => __( 'Enter information about the main ingredient here.', 'woocommerce' )
+      )
+    );
+
+    woocommerce_wp_textarea_input(
+      array(
+        'id'          => '_main_ingredient_image',
+        'label'       => __( 'Main ingredient image', 'woocommerce' ),
+        'placeolder'  => '',
+        'description' => __( 'Enter URL to main ingredient image here.', 'woocommerce' )
+      )
+    );
+
     echo '</div>';
 
   }
@@ -41,6 +77,10 @@
     $ingredient_list = $_POST['_ingredients'];
     $eu_ingredient_list = $_POST['_ingredients_eu'];
     $directions = $_POST['_directions'];
+    $optional_field = $_POST['_optional_field'];
+    $main_ingredient_title = $_POST['_main_ingredient_title'];
+    $main_ingredient_info = $_POST['_main_ingredient_info'];
+    $main_ingredient_image = $_POST['_main_ingredient_image'];
 
     if( !empty( $ingredient_list ) )
       update_post_meta( $post_id, '_ingredients', esc_html( $ingredient_list ) );
@@ -50,6 +90,18 @@
 
     if( !empty( $directions ) )
       update_post_meta( $post_id, '_directions', esc_html( $directions ) );
+
+    if( !empty( $optional_field ) )
+      update_post_meta( $post_id, '_optional_field', esc_html( $optional_field ) );
+
+    if( !empty( $main_ingredient_info ) )
+      update_post_meta( $post_id, '_main_ingredient_title', esc_html( $main_ingredient_title ) );
+
+    if( !empty( $main_ingredient_info ) )
+      update_post_meta( $post_id, '_main_ingredient_info', esc_html( $main_ingredient_info ) );
+
+    if( !empty( $main_ingredient_info ) )
+      update_post_meta( $post_id, '_main_ingredient_image', esc_html( $main_ingredient_image ) );
 
   }
 

@@ -5,41 +5,34 @@
 .jumbotron
   +clearfix
   position: relative
-  background-color: #F7FF00
+  background-color: #D1E9F1
   margin-bottom: $base-spacing
 
   .jumbotron-product
     +span(full)
     padding: $base-spacing
 
-    img
-      margin-bottom: $small-spacing
-
     +breakpoint($medium-screen)
-      +span(6)
+      +span(7)
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      left: 0
       padding: $base-spacing*2
 
     +breakpoint($large-screen)
       +span(5)
 
   .jumbotron-image
-    display: none
 
     +breakpoint($medium-screen)
-      display: block
-      +span(full)
+      +span(5 last)
+
+    +breakpoint($large-screen)
+      +span(7 last)
 
     img
       display: block
-
-      +breakpoint($medium-screen)
-        +span(6 last)
-        position: absolute
-        bottom: 0
-        right: 0
-
-      +breakpoint($large-screen)
-        +span(7 last)
 
 .storefront-featured-products
   +clearfix

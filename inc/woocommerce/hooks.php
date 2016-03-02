@@ -22,8 +22,8 @@ add_action( 'woocommerce_single_product_summary', 'woocommerce_template_product_
 add_action( 'woocommerce_single_product_summary', 'indielee_template_custom_field_ingredients', 65 );
 add_action( 'woocommerce_single_product_summary', 'indielee_template_custom_field_directions', 75 );
 
-add_action( 'woocommerce_after_single_product_summary', 'indielee_template_brand_info', 5 );
-add_action( 'woocommerce_after_single_product_summary', 'indielee_template_ingredient_info', 10 );
+add_action( 'woocommerce_after_single_product_summary', 'indielee_template_optional_field', 5 );
+add_action( 'woocommerce_after_single_product_summary', 'indielee_template_main_ingredient_info', 10 );
 add_action( 'woocommerce_after_single_product_summary', 'woocommerce_template_product_review', 15 );
 
 add_filter( 'woocommerce_add_to_cart_fragments', 'indielee_cart_link_fragment' );

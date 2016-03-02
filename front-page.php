@@ -9,14 +9,13 @@ get_header(); ?>
       <section class="jumbotron">
 
         <div class="jumbotron-product">
-          <img src="/wp-content/uploads/2016/03/SqualaneOil_Yellow.jpg" class="attachment-shop_catalog wp-post-image" alt="SqualaneOil_Yellow">
-          <h3>Squalane Facial Oil</h3>
-          <p>En återfuktande olja utvunnen ur oliver.</p>
-          <a href="#" class="button inverted">Explore</a>
+          <h3>Defy Age Naturally</h3>
+          <p>Roseship Cleanser, Swiss Apple Facial Serum &amp; Squalane Facial Cream</p>
+          <a href="/shop" class="button inverted">Gå till butiken</a>
         </div>
 
         <div class="jumbotron-image">
-          <img src="/wp-content/uploads/2016/03/SqualaneOil_Yellow.jpg">
+          <img src="/wp-content/uploads/2016/03/anti-age.jpg">
         </div>
 
       </section>
