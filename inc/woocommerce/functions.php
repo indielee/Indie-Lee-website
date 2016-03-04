@@ -154,4 +154,11 @@ add_filter( 'woocommerce_package_rates', 'hide_shipping_when_free_is_available',
   	return $rates;
   }
 
+/* Remove INCL VAT label in products in cart */
+function indie_lee_change_cart_product_tax_label ( $label ) {
+  $label = '';
+  return $label;
+}
+add_filter( 'woocommerce_countries_inc_tax_or_vat', 'indie_lee_change_cart_product_tax_label' );
+
 ?>
