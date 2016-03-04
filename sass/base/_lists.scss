@@ -29,3 +29,12 @@ dl {
     margin: 0;
   }
 }
+
+.horizontal-list li {
+  display: inline-block;
+  margin-right: $base-spacing;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

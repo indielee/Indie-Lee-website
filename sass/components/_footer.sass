@@ -12,39 +12,23 @@ footer.site-footer
     +breakpoint($medium-screen)
       +span(6)
 
-    .column-third, .column-two-thirds
-      +span(12)
-      margin-bottom: $base-spacing
-
-      +breakpoint($medium-screen)
-        margin: 0
-
-    .column-third
-      +breakpoint($medium-screen)
+      ul li
         +span(1 of 3)
+        margin-bottom: em(3px)
 
-    .column-two-thirds
-      +breakpoint($medium-screen)
-        +span(2 of 3 last)
-
-      .column-row
-        +clearfix
-        margin-bottom: $base-spacing
-
-        &:last-child
-          margin: 0
-
-        ul
-          +span(1 of 2)
-
-          &:nth-child(2n)
-            +span(1 of 2 last)
-
-          li
-            margin-bottom: em(3px)
+        &:nth-child(3n+3)
+          +span(1 of 3 last)
 
     h3
       margin: 0
+
+    a
+      @extend h3
+      color: #FFFFFF
+
+      &:hover,
+      &:focus
+        color: $light-gray
 
   .footer-information
     +span(12)
@@ -68,17 +52,29 @@ footer.site-footer
         +span(4)
         +push(2)
 
+      ul
+        @extend .horizontal-list
+
+        li
+          margin-right: 0
+
+          &:after
+            content: " / "
+
+          &:last-child:after
+            content: none
+
     .copyright
       +span(12)
 
       +breakpoint($medium-screen)
         +span(6 last)
 
-  a
-    color: $light-gray
+    a
+      color: $light-gray
 
-    &:hover
-      color: #FFFFFF
+      &:hover
+        color: #FFFFFF
 
   p, span
     color: $light-gray

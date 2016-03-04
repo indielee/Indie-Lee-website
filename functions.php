@@ -49,7 +49,7 @@ function indie_lee_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'indie-lee' ),
-		'secondary' => esc_html__( 'Top Menu', 'indie-lee' ),
+		'policies' => esc_html__( 'T&Cs Menu', 'indie-lee' ),
 	) );
 
 	/*
@@ -125,6 +125,16 @@ function indie_lee_widgets_init() {
 		'after_widget'  => '</div>',
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
+	) );
+
+	register_sidebar( array(
+		'name'					=> 'Footer information',
+		'id'            => 'footer-information',
+		'description'   => 'Display brand information in footer',
+		'before_widget' => '<div id="%1$s" class="footer-information widget %2$s">',
+		'after_widget' 	=> '</div>',
+		'before_title' 	=> '<h3>',
+		'after_title' 	=> '</h3>',
 	) );
 }
 add_action( 'widgets_init', 'indie_lee_widgets_init' );
