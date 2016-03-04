@@ -8,13 +8,17 @@ footer.site-footer
 
   .footer-navigation
     +span(12)
+    margin-bottom: $base-spacing
 
     +breakpoint($medium-screen)
       +span(6)
+      margin-bottom: 0
 
-      ul li
+    ul li
+      margin-bottom: em(5px)
+
+      +breakpoint($medium-screen)
         +span(1 of 3)
-        margin-bottom: em(3px)
 
         &:nth-child(3n+3)
           +span(1 of 3 last)
