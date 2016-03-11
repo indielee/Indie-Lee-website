@@ -15,7 +15,7 @@ get_header(); ?>
         </div>
 
         <div class="jumbotron-image">
-          <img src="/wp-content/uploads/2016/03/anti-age.jpg">
+          <img src="/wp-content/uploads/2016/03/aging-kit.jpg">
         </div>
 
       </section>
@@ -39,7 +39,6 @@ get_header(); ?>
       </div>
 
     </section>
-
   </div><!-- #primary -->
 
 <?php

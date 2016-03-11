@@ -32,19 +32,19 @@
       <h2>As seen in</h2>
       <div class="logos-container">
         <div class="media-logo">
-          <img src="/wp-content/uploads/2016/02/elle.png" alt="Elle" />
+					<img src="/wp-content/uploads/2016/02/modette.png" alt="Modette" />
         </div>
         <div class="media-logo">
-          <img src="/wp-content/uploads/2016/02/metro-mode.png" alt="Metro Mode" />
-        </div>
-        <div class="media-logo">
-          <img src="/wp-content/uploads/2016/02/modette.png" alt="Modette" />
+					<img src="/wp-content/uploads/2016/02/elle.png" alt="Elle" />
         </div>
         <div class="media-logo">
           <img src="/wp-content/uploads/2016/02/kosmetik.png" alt="Kosmetik" />
         </div>
         <div class="media-logo">
           <img src="/wp-content/uploads/2016/02/bazaar.png" alt="Bazaar" />
+        </div>
+        <div class="media-logo">
+          <img src="/wp-content/uploads/2016/02/metro-mode.png" alt="Metro Mode" />
         </div>
         <div class="media-logo">
           <img src="/wp-content/uploads/2016/02/vogue.png" alt="Vogue" />
@@ -54,7 +54,7 @@
 
     <div class="about-indie">
       <div class="about-indie-image">
-        <img src="http://indielee.com/shop/media/catalog/product/cache/1/image/460x/17f82f742ffe127f42dca9de82fb58b1/c/o/complexion-kit-composite-2.jpg" alt="About Indie" />
+        <img src="/wp-content/uploads/2016/03/indie.jpg" alt="About Indie" />
       </div>
       <div class="about-indie-text">
         <h2>About Indie</h2>
@@ -69,7 +69,7 @@
 
     <div class="about-indie">
       <div class="about-indie-image">
-        <img src="http://indielee.com/shop/media/catalog/product/cache/1/image/460x/17f82f742ffe127f42dca9de82fb58b1/c/o/complexion-kit-composite-2.jpg" alt="About Indie" />
+        <img src="/wp-content/uploads/2016/03/cleanser.jpg" alt="About Indie" />
       </div>
       <div class="about-indie-text">
         <h2>About Indie</h2>

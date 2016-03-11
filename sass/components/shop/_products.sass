@@ -1,18 +1,57 @@
 .products
+  @extend %no-list-style
+
+
 
   >li
     +span(12)
     margin-bottom: $base-spacing
+    text-align: center
 
+    // create overflowing line on bigger screens
     +breakpoint($small-screen)
+      hr
+        margin: $small-spacing -4%
+
+      &:last-child hr
+        margin-right: 0
+
+    +breakpoint($small-screen $medium-screen)
       +gallery(6)
 
-    +breakpoint($medium-screen)
+      // avoid overflowing line on first and last products in row
+      &:nth-child(2n+1) hr
+        margin-left: 0
+
+      &:nth-child(2n+2) hr
+        margin-right: 0
+
+
+
+    +breakpoint($medium-screen $large-screen)
       +gallery(4)
       +gutter(no-gutter)
 
+      // avoid overflowing line on first and last products in row
+      &:nth-child(3n+1) hr
+        margin-left: 0
+
+      &:nth-child(3n+3) hr
+        margin-right: 0
+
+
+
     +breakpoint($large-screen)
       +gallery(3)
+
+      // avoid overflowing line on first and last products in row
+      &:nth-child(4n+1) hr
+        margin-left: 0
+
+      &:nth-child(4n+4) hr
+        margin-right: 0
+
+
 
     .thumbnail-container
       display: block
@@ -21,3 +60,15 @@
       +breakpoint(max-width $small-screen)
         img
           max-height: 150px
+
+
+
+    .product-info
+      margin-bottom: em(8px)
+
+      h3
+        line-height: 1.4
+        margin-bottom: 0
+
+      p.price
+        @extend h3

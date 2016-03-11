@@ -10,14 +10,19 @@
       +span(5)
 
     h1.product_title
-      font-family: $heading-font-family
-      font-size: $h2-font-size
+      @extend h2
 
     .short-description
       text-transform: uppercase
 
+      p
+        margin-bottom: $small-spacing/2
+        font-weight: 500
+
     .price
       font-size: $h2-font-size
+      font-weight: $bold-font-weight
+      margin-bottom: $small-spacing/2
 
   .images
     +span(full)
@@ -42,19 +47,20 @@
 
   .cart
     +span(full)
+    margin-bottom: $small-spacing/2
 
     .quantity
       float: left
 
       input
-        width: 100px
+        width: 60px
 
     input, button
       height: 45px
 
     button
       float: left
-      @extend button.cta
+      @extend button.inverted
 
   .product-detail
     border-bottom: 1px solid $base-border-color

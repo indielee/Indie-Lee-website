@@ -217,7 +217,7 @@ function my_theme_wrapper_end() {
 	}
 
 // Add press image sizes
-add_image_size( 'press_size', 400, 600,  array( 'center', 'top' ) );
+add_image_size( 'press_size', 400, 519,  array( 'center', 'top' ) );
 
 // Change breadcrumb separator
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_delimiter' );

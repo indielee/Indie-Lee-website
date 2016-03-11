@@ -18,10 +18,20 @@
       top: 50%
       transform: translateY(-50%)
       left: 0
-      padding: $base-spacing*2
+      padding: $base-spacing*1.5
 
     +breakpoint($large-screen)
       +span(5)
+
+    h3
+      @extend h1
+
+    p
+      font-size: $h2-font-size*0.85
+      line-height: 1.35
+
+      +breakpoint($medium-screen)
+        font-size: $h2-font-size
 
   .jumbotron-image
 
@@ -50,12 +60,20 @@
     text-align: center
     color: #fff
 
-    p
+    p,
+    h3
       font-size: $h2-font-size*0.85
-      margin-bottom: 0
+      line-height: 1.35
+      text-transform: none
 
       +breakpoint($medium-screen)
         font-size: $h2-font-size
+
+    p
+      margin-bottom: 0
+
+    h3
+      font-weight: 500
 
     +breakpoint($medium-screen)
       max-width: 75%

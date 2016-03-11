@@ -4,22 +4,27 @@
 
 .video-hero
   width: 100%
-  background-image: url('/wp-content/uploads/2016/02/about-indie.jpg')
+  background-image: url('/wp-content/uploads/2016/03/about-indie.jpg')
   background-position: center
   background-size: cover
   padding: $base-spacing*5 0
   text-align: center
-  margin-bottom: $base-spacing
   white-space: pre-line
 
   +breakpoint($medium-screen)
     white-space: normal
 
-  .button:first-child
-    margin-bottom: $small-spacing
+  .button
+    border-color: $base-font-color
+    color: #000
+    background-color: #fff
+    border-color: #fff
 
-    +breakpoint($medium-screen)
-      margin-bottom: 0
+    &:first-child
+      margin-bottom: $small-spacing
+
+      +breakpoint($medium-screen)
+        margin-bottom: 0
 
   label
     margin: 0
@@ -44,14 +49,16 @@
       float: none
       vertical-align: middle
       width: 10%
-      padding: 1.5%
+      padding: 1.5% 1.5% 0.75% 1.5%
 
       &:nth-child(1n+5)
         display: table-cell
 
+    img
+      max-height: 37px
+
 .about-indie
   +span(full)
-  margin-bottom: $base-spacing
 
   .about-indie-text, .about-indie-image
     +span(full)
@@ -62,15 +69,21 @@
   +breakpoint($medium-screen)
 
     .about-indie-text
-      +span(6)
+      float: right
+      width: 50%
+      padding: 3%
 
     .about-indie-image
-      +span(6 last)
-      margin-bottom: 0
+      float: left
+      width: 50%
+      margin: 0
+
+      img
+        display: block
 
     &:nth-child(2n+2)
       .about-indie-text
-        +span(6 last)
+        float: left
 
       .about-indie-image
-        +span(6)
+        float: right

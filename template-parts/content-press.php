@@ -12,13 +12,13 @@
 		<a href="<?php echo esc_url( get_permalink() ); ?>">
 			<?php the_post_thumbnail('press_size'); ?>
 		</a>
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php indie_lee_posted_on(); ?>
 		</div><!-- .entry-meta -->
-		<?php endif; ?>
+	<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">

@@ -14,14 +14,11 @@ footer.site-footer
       +span(6)
       margin-bottom: 0
 
-    ul li
-      margin-bottom: em(5px)
+    ul
+      @extend %no-list-style
 
-      +breakpoint($medium-screen)
-        +span(1 of 3)
-
-        &:nth-child(3n+3)
-          +span(1 of 3 last)
+      li
+        margin-bottom: em(5px)
 
     h3
       margin: 0
@@ -53,11 +50,11 @@ footer.site-footer
       +span(12)
 
       +breakpoint($medium-screen)
-        +span(4)
-        +push(2)
+        +span(6)
 
       ul
-        @extend .horizontal-list
+        @extend %no-list-style
+        @extend %horizontal-list
 
         li
           margin-right: 0
