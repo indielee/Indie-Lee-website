@@ -9,23 +9,20 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
+
+		<a href="<?php the_permalink(); ?>">
+			<?php the_post_thumbnail(); ?>
+		</a>
+
 		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php indie_lee_posted_on(); ?>
-		</div><!-- .entry-meta -->
+
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'indie-lee' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
-		?>
+		<?php the_excerpt() ?>
 
 		<?php
 			wp_link_pages( array(
@@ -35,7 +32,4 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php indie_lee_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

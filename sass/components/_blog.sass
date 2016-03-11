@@ -7,3 +7,32 @@ nav.posts-navigation
     &:hover,
     &:focus
       color: $secondary-action-color
+
+.blog-posts-container
+  +span(full)
+  margin-top: $small-spacing
+
+  .blog-post
+    margin-bottom: $base-spacing
+
+    +breakpoint($medium-screen)
+      +span(7)
+      +push(2.5)
+
+    img
+      margin-bottom: $small-spacing
+
+    article a,
+    .nav-links a
+      color: darken($secondary-action-color, 20%)
+
+      &:hover,
+      &:focus
+        color: $secondary-action-color
+
+    h1 a
+      color: $action-color
+
+      &:hover,
+      &:focus
+        color: lighten($action-color, 25%)

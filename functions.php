@@ -219,6 +219,18 @@ function my_theme_wrapper_end() {
 // Add press image sizes
 add_image_size( 'press_size', 400, 519,  array( 'center', 'top' ) );
 
+// change the excerpt length
+function indie_lee_excerpt_length( $length ) {
+	return 45;
+}
+add_filter( 'excerpt_length', 'indie_lee_excerpt_length', 999 );
+
+// remove [...] from the excerpt
+function indie_lee_excerpt_more($more) {
+    return '...';
+}
+add_filter('excerpt_more', 'indie_lee_excerpt_more', 21 );
+
 // Change breadcrumb separator
 add_filter( 'woocommerce_breadcrumb_defaults', 'jk_change_breadcrumb_delimiter' );
 function jk_change_breadcrumb_delimiter( $defaults ) {
