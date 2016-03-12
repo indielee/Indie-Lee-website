@@ -43,10 +43,10 @@ button,
 
     &:hover,
     &:focus {
-      background: none;
-      color: $action-color;
+      background: $secondary-action-color;
+      color: #FFF;
       border: $button-border;
-      border-color: $action-color;
+      border-color: $secondary-action-color;
     }
   }
 
