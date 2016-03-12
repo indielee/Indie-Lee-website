@@ -16,38 +16,26 @@
       text-transform: uppercase
 
       p
-        margin-bottom: $small-spacing/2
         font-weight: 500
+
+    div[itemprop="offers"]
+      +span(3 of 10)
+
+      +breakpoint($medium-screen)
+        +span(2 of 10)
 
     .price
       font-size: $h2-font-size
       font-weight: $bold-font-weight
-      margin-bottom: $small-spacing/2
-
-  .images
-    +span(full)
-    text-align: center
-
-    +breakpoint($medium-screen)
-      +span(5 last)
-
-    +breakpoint($large-screen)
-      +span(7 last)
-
-    img
-      max-height: 300px
-
-      +breakpoint($medium-screen)
-        max-height: none
-
-  .related.products
-    +span(full)
-    border-top: $thick-border
-    padding-top: $base-spacing
+      margin-top: em(4px)
+      margin-bottom: 0
 
   .cart
-    +span(full)
+    +span(7 of 10 last)
     margin-bottom: $small-spacing/2
+
+    +breakpoint($medium-screen)
+      +span(8 of 10 last)
 
     .quantity
       float: left
@@ -69,6 +57,27 @@
     &:last-child
       border-bottom: none
       margin-bottom: 0
+
+  .images
+    +span(full)
+    text-align: center
+
+    +breakpoint($medium-screen)
+      +span(5 last)
+
+    +breakpoint($large-screen)
+      +span(7 last)
+
+    img
+      max-height: 300px
+
+      +breakpoint($medium-screen)
+        max-height: none
+
+  .related.products
+    +span(full)
+    border-top: $thick-border
+    padding-top: $base-spacing
 
 .optional-field-container
   +span(full)
