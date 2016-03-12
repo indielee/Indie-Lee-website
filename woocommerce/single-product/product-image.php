@@ -35,7 +35,7 @@ global $post, $woocommerce, $product;
 				$gallery = '';
 			}
 
-			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( '<img alt="%s" src="%s">', $image_caption, $image_link ), $post->ID ); // lightbox code: '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '">%s</a>'
+			echo apply_filters( 'woocommerce_single_product_image_html', sprintf( $image, $image_caption, $image_link ), $post->ID ); // lightbox code: '<a href="%s" itemprop="image" class="woocommerce-main-image zoom" title="%s" data-rel="prettyPhoto' . $gallery . '">%s</a>'
 
 		} else {
 
