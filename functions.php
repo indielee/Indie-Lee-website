@@ -227,7 +227,10 @@ add_filter( 'excerpt_length', 'indie_lee_excerpt_length', 999 );
 
 // remove [...] from the excerpt
 function indie_lee_excerpt_more($more) {
-    return '...';
+	return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
+    get_permalink( get_the_ID() ),
+    __( 'Read More', 'textdomain' )
+  );
 }
 add_filter('excerpt_more', 'indie_lee_excerpt_more', 21 );
 

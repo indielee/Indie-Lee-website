@@ -57,12 +57,15 @@
         <img src="/wp-content/uploads/2016/03/indie.jpg" alt="About Indie" />
       </div>
       <div class="about-indie-text">
-        <h2>About Indie</h2>
+        <h2>Om Indie Lee</h2>
         <p>
-          After conquering a life-threatening brain tumor that pointed to environmental toxins as the culprit, Indie Lee awoke on April 22, 2009 with a new lease on life and the passion to create a chic and eco-friendly namesake collection. Comprised of the finest all-natural ingredients around the world, the line is designed to enhance the face and body with gratifying green glamour. Indulge in the luxurious feel and beautiful benefits of Indie Lee products while protecting the Earth– and your body. Unleash your inner and outer beauty with Indie Lee, an eco-chic collection of skincare products that combine style and sustainability without sacrifice.
+          Efter att ha vunnit kampen över en svår hjärntumör 2009, som enligt läkarna troligen var ett resultat av miljögifter, vaknade Indie Lee upp med nya krafter och en dröm om att skapa en modern, hållbar och ekologisk hudvårdsserie som bar hennes namn.
         </p>
         <p>
-          Unleash your inner and outer beauty with Indie Lee, an eco-chic collection of skincare products that combine style and sustainability without sacrifice.
+          Hon hade en tanke om att skapa en speciell kollektion av hållbara och moderna hudvårdsprodukter som både skulle förbättra vår miljö och få henne och hennes medmänniskor att må bättre. Indie Lees gripande livsöde har visat sig inspirera till ”aha-ögonblick” hos många då de kunnat se sitt bästa jag genom hennes personliga historia.
+        </p>
+        <p>
+          Genom att höja upp en alldeles vanlig hudvårdsrutin till en mer upplyst livsstil, visar Indie Lees kollektion att det som är bra för vår planet också är bra för själ och hjärta. Varje produkt kommer med det kraftfulla budskapet från Indie Lee, vackert paketerad.
         </p>
       </div>
     </div>
@@ -72,12 +75,15 @@
         <img src="/wp-content/uploads/2016/03/cleanser.jpg" alt="About Indie" />
       </div>
       <div class="about-indie-text">
-        <h2>About Indie</h2>
+        <h2>Ekologisk hudvårdskollektion</h2>
         <p>
-          After conquering a life-threatening brain tumor that pointed to environmental toxins as the culprit, Indie Lee awoke on April 22, 2009 with a new lease on life and the passion to create a chic and eco-friendly namesake collection. Comprised of the finest all-natural ingredients around the world, the line is designed to enhance the face and body with gratifying green glamour. Indulge in the luxurious feel and beautiful benefits of Indie Lee products while protecting the Earth– and your body. Unleash your inner and outer beauty with Indie Lee, an eco-chic collection of skincare products that combine style and sustainability without sacrifice.
+          Släpp lös din inre och yttre skönhet tillsammans med Indie Lee och hennes lyxiga, hundra procent naturliga kollektion av ekologiska hudvårdsprodukter som kombinerar stil och hållbarhet utan att göra avkall på något. Produkterna, som består av de finaste naturliga ingredienserna från hela världen, är skapade för att förbättra huden i kropp och ansikte med välgörande grön hudvård. 
         </p>
         <p>
-          Unleash your inner and outer beauty with Indie Lee, an eco-chic collection of skincare products that combine style and sustainability without sacrifice.
+          Skäm bort dig själv med den lyxiga känslan och det vackra resultat Indie Lees produkter ger medan du samtidigt hjälper till att skydda planeten. Indie Lees rengöringskrämer, oljor, serum och återfuktare ger dig och din hud och samtidigt vår planet, välbefinnande. Produkterna innehåller endast naturliga (och naturligt härledda), GMO-fria ekologiska ingredienser. Resultatet är lätthanterliga produkter som ger din hud den extra omsorgen och skyddet.          
+        </p>
+        <p>
+          Kollektionen från Indie Lee är helt fri från toxiner och kemikalier, och är Leaping Bunny-certifierad (dvs. inte testad på djur i något led av produktionen).
         </p>
       </div>
     </div>
