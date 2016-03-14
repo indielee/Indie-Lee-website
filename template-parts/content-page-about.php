@@ -14,9 +14,13 @@
 
     <div class="video-hero">
       <label class="button inverted" for="videoModal">
-        <div class="modal-trigger">Watch video</div>
+        <div class="modal-trigger">
+					<?php esc_html_e( 'Play video', 'indie-lee' ); ?>
+				</div>
       </label>
-      <a href="/shop" class="button inverted">Shop products</a>
+      <a href="/shop" class="button inverted">
+				<?php esc_html_e( 'Go to store', 'indie-lee' ); ?>
+			</a>
     </div>
 
     <div class="modal video">
@@ -29,7 +33,9 @@
     </div>
 
     <div class="featured-media">
-      <h2>As seen in</h2>
+      <h2>
+				<?php esc_html_e( 'As seen in', 'indie-lee' ); ?>
+			</h2>
       <div class="logos-container">
         <div class="media-logo">
 					<img src="/wp-content/uploads/2016/02/modette.png" alt="Modette" />
@@ -77,10 +83,10 @@
       <div class="about-indie-text">
         <h2>Ekologisk hudvårdskollektion</h2>
         <p>
-          Släpp lös din inre och yttre skönhet tillsammans med Indie Lee och hennes lyxiga, hundra procent naturliga kollektion av ekologiska hudvårdsprodukter som kombinerar stil och hållbarhet utan att göra avkall på något. Produkterna, som består av de finaste naturliga ingredienserna från hela världen, är skapade för att förbättra huden i kropp och ansikte med välgörande grön hudvård. 
+          Släpp lös din inre och yttre skönhet tillsammans med Indie Lee och hennes lyxiga, hundra procent naturliga kollektion av ekologiska hudvårdsprodukter som kombinerar stil och hållbarhet utan att göra avkall på något. Produkterna, som består av de finaste naturliga ingredienserna från hela världen, är skapade för att förbättra huden i kropp och ansikte med välgörande grön hudvård.
         </p>
         <p>
-          Skäm bort dig själv med den lyxiga känslan och det vackra resultat Indie Lees produkter ger medan du samtidigt hjälper till att skydda planeten. Indie Lees rengöringskrämer, oljor, serum och återfuktare ger dig och din hud och samtidigt vår planet, välbefinnande. Produkterna innehåller endast naturliga (och naturligt härledda), GMO-fria ekologiska ingredienser. Resultatet är lätthanterliga produkter som ger din hud den extra omsorgen och skyddet.          
+          Skäm bort dig själv med den lyxiga känslan och det vackra resultat Indie Lees produkter ger medan du samtidigt hjälper till att skydda planeten. Indie Lees rengöringskrämer, oljor, serum och återfuktare ger dig och din hud och samtidigt vår planet, välbefinnande. Produkterna innehåller endast naturliga (och naturligt härledda), GMO-fria ekologiska ingredienser. Resultatet är lätthanterliga produkter som ger din hud den extra omsorgen och skyddet.
         </p>
         <p>
           Kollektionen från Indie Lee är helt fri från toxiner och kemikalier, och är Leaping Bunny-certifierad (dvs. inte testad på djur i något led av produktionen).
