@@ -360,3 +360,23 @@ msgstr ""
 #: template-parts/content-page-about.php:37
 msgid "As seen in"
 msgstr ""
+
+# @ _s
+#: template-parts/front-page.php:37
+msgid "Devoted to making all natural beauty products"
+msgstr ""
+
+# @ _s
+#: template-parts/front-page.php:40
+msgid "Finest natural ingredients"
+msgstr ""
+
+# @ _s
+#: template-parts/front-page.php:43
+msgid "What you put on your body is just as important as what you put in it. Indie Lee uses all natural ingredients, carefully selected for it\'s proven effect."
+msgstr ""
+
+# @ _s
+#: inc/structure/template-tags.php:68
+msgid "Bestsellers"
+msgstr ""

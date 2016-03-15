@@ -30,11 +30,11 @@ if ( ! function_exists( 'indielee_homepage_jumbotron' ) ) {
 
         <?php if( !empty($product_header) ): ?>
             <h3><?php echo "$product_header"; ?></h3>
-        <?php endif; ?>   
+        <?php endif; ?>
 
         <?php if( !empty($product_description) ): ?>
             <p><?php echo "$product_description"; ?></p>
-        <?php endif; ?>  
+        <?php endif; ?>
 
         <a href="#" class="button inverted">Explore</a>
       </div>
@@ -43,7 +43,7 @@ if ( ! function_exists( 'indielee_homepage_jumbotron' ) ) {
         <div class="jumbotron-image">
           <img src="<?php echo $secondary_img; ?>">
         </div>
-      <?php endif; ?>  
+      <?php endif; ?>
 
     </section>
 	<?php }
@@ -65,7 +65,7 @@ if ( ! function_exists( 'indielee_homepage_bestsellers' ) ) {
 
       echo '<section class="storefront-product-section storefront-featured-products">';
 
-        echo '<h2 class="section-title">' . 'Bestsellers' . '</h2>';
+        echo '<h2 class="section-title">' . esc_html__( 'Bestsellers', 'indie-lee' ) . '</h2>';
 
         echo do_shortcode_func( 'featured_products',
           array(
@@ -93,7 +93,7 @@ if ( ! function_exists( 'indielee_homepage_about' ) ) {
   function indielee_homepage_about() { ?>
 
       <section class="about-section" style="background-image:url('http://indielee.dev/wp-content/uploads/2015/12/natural.jpg');">
-        
+
         <div class="about-text">
           <h3>Devoted to making all natural beauty products</h3>
           <h1>Finest natural ingredients</h1>

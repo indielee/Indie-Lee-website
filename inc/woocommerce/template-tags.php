@@ -1,7 +1,23 @@
 <?php
 
 function indielee_template_custom_field_ingredients() {
-  echo '<div class="product-detail" id="ingredients-container">' . '<h3>Ingredients</h3>' . '<p>' . get_post_meta( get_the_ID(), '_ingredients', true ) . ' <span id="eu-ingredients-title">Visa INCI-namn</span>' . '</p>'  . '<div class="eu-compliant-ingredient-list" id="eu-ingredients-list">' . '<p>' . get_post_meta( get_the_ID(), '_ingredients_eu', true ) . '</p></div></div>';
+  $ingredient_list = get_post_meta( get_the_ID(), '_ingredients', true );
+  $ingredient_list_eu = get_post_meta( get_the_ID(), '_ingredients_eu', true );
+
+  if ( ! ( $ingredient_list_eu == null || $ingredient_list_eu == '' ) ) {
+    echo '<div class="product-detail" id="ingredients-container">
+          <h3>Ingredients</h3>
+            <p>' . $ingredient_list . ' <span id="eu-ingredients-title">Visa INCI-namn</span>' . '</p>
+            <div class="eu-compliant-ingredient-list" id="eu-ingredients-list">
+              <p>' . $ingredient_list_eu . '</p>
+            </div>
+          </div>';
+  } else {
+    echo '<div class="product-detail" id="ingredients-container">
+          <h3>Ingredients</h3>
+            <p>' . $ingredient_list . '</p>
+          </div>';
+  }
 }
 
 function indielee_template_custom_field_directions() {
@@ -53,13 +69,20 @@ if ( ! function_exists( 'indielee_template_optional_field' ) ) {
 if ( ! function_exists( 'indielee_template_main_ingredient_info' ) ) {
 
   function indielee_template_main_ingredient_info() {
-    echo '<div class="ingredient-info-container">
-            <div class="ingredient-info">
-              <h2>' . get_post_meta( get_the_ID(), '_main_ingredient_title', true ) . '</h2>
-              <p>' . get_post_meta( get_the_ID(), '_main_ingredient_info', true ) . '</p>
-            </div>
-            <div class="ingredient-image" style="background-image:url(' . get_post_meta( get_the_ID(), '_main_ingredient_image', true ) . ')"></div>
-          </div>';
+    $ingredient_title = get_post_meta( get_the_ID(), '_main_ingredient_title', true );
+    $ingredient_info = get_post_meta( get_the_ID(), '_main_ingredient_info', true );
+    $ingredient_image = get_post_meta( get_the_ID(), '_main_ingredient_image', true );
+
+    // if all ingredient inputs are filled, display main ingredient on product page
+    if( ! ( $ingredient_title == null || $ingredient_title == '' || $ingredient_info == null || $ingredient_info == '' || $ingredient_image == null || $ingredient_image == '' ) ) {
+      echo '<div class="ingredient-info-container">
+              <div class="ingredient-info">
+                <h2>' . $ingredient_title . '</h2>
+                <p>' . $ingredient_info . '</p>
+              </div>
+              <div class="ingredient-image" style="background-image:url(' . $ingredient_image . ')"></div>
+            </div>';
+    }
   }
 
 }

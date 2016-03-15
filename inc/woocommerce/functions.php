@@ -46,7 +46,7 @@
         'id'          => '_main_ingredient_title',
         'label'       => __( 'Main ingredient title', 'woocommerce' ),
         'placeolder'  => '',
-        'description' => __( 'Enter main ingredient title.', 'woocommerce' )
+        'description' => __( 'Enter main ingredient title. Only displayed when Main ingredient title, info and image is filled.', 'woocommerce' )
       )
     );
 
@@ -55,7 +55,7 @@
         'id'          => '_main_ingredient_info',
         'label'       => __( 'Main ingredient information', 'woocommerce' ),
         'placeolder'  => '',
-        'description' => __( 'Enter information about the main ingredient here.', 'woocommerce' )
+        'description' => __( 'Enter information about the main ingredient here.  Only displayed when Main ingredient title, info and image is filled.', 'woocommerce' )
       )
     );
 
@@ -64,7 +64,7 @@
         'id'          => '_main_ingredient_image',
         'label'       => __( 'Main ingredient image', 'woocommerce' ),
         'placeolder'  => '',
-        'description' => __( 'Enter URL to main ingredient image here.', 'woocommerce' )
+        'description' => __( 'Enter URL to main ingredient image here.  Only displayed when Main ingredient title, info and image is filled.', 'woocommerce' )
       )
     );
 
