@@ -53,9 +53,12 @@ if ( ! function_exists( 'woocommerce_template_product_review' ) ) {
   */
 
 if ( ! function_exists( 'indielee_template_optional_field' ) ) {
+  $optional_field = html_entity_decode( get_post_meta( get_the_ID(), '_optional_field', true ) );
 
-  function indielee_template_optional_field() {
-     echo '<div class="optional-field-container">' . html_entity_decode( get_post_meta( get_the_ID(), '_optional_field', true ) ) . '</div>';
+  if ( ! ( $optional_field == null || $optional_field == '') ) {
+    function indielee_template_optional_field() {
+      echo '<div class="optional-field-container">' . $optional_field . '</div>';
+    }
   }
 
 }
