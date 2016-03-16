@@ -8,10 +8,14 @@
     margin-bottom: $base-spacing
     text-align: center
 
+    hr
+      position: relative
+      top: -5px
+
     // create overflowing line on bigger screens
     +breakpoint($small-screen)
       hr
-        margin: $small-spacing -4%
+        margin: 0 -4% $small-spacing -4%
 
       &:last-child hr
         margin-right: 0
@@ -55,11 +59,13 @@
 
     .thumbnail-container
       display: block
-      text-align: center
+
+      img
+        margin: 0 auto
+        display: block
 
       +breakpoint(max-width $small-screen)
-        img
-          max-height: 150px
+        max-height: 150px
 
 
 

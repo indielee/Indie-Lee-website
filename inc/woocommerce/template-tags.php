@@ -104,7 +104,15 @@ if ( ! function_exists( 'indielee_cart_link' ) ) {
     ?>
       <a class="cart-contents" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php _e( 'View your shopping cart', 'indielee' ); ?>">
         <img class="cart-icon" src="/wp-content/themes/indielee/icons/cart.svg" alt="Cart" />
-        <span class="cart-text"><?php _e( 'Your order', 'indielee' ); ?> /&#32;</span><span class="count"><?php echo wp_kses_data( sprintf( _n( ' %d item', ' %d items', WC()->cart->get_cart_contents_count(), 'indielee' ), WC()->cart->get_cart_contents_count() ) );?></span>
+        <span class="cart-text">
+          <?php esc_html_e( 'Your order', 'indie-lee' ); ?> /&#32;
+        </span>
+        <span class="count">
+          <?php
+            $count = WC()->cart->get_cart_contents_count();
+            printf( esc_html( _n( '%d item', '%d items', $count, 'indie-lee'  ) ), $count );
+          ?>
+        </span>
       </a>
     <?php
   }

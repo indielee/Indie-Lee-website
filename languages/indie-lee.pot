@@ -380,3 +380,25 @@ msgstr ""
 #: inc/structure/template-tags.php:68
 msgid "Bestsellers"
 msgstr ""
+
+# @ _s
+#: inc/woocommerce/template-tags.php:107
+msgid "Your order"
+msgstr ""
+
+# @ _s
+#: inc/woocommerce/template-tags.php:107
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] ""
+msgstr[1] ""
+
+# @ _s
+#: woocommerce/single-product-reviews.php:60
+msgid "Be the first to review"
+msgstr ""
+
+# @ _s
+#: woocommerce/cart/cart-totals.php:91
+msgid "Note: Shipping and taxes are estimated%s and will be updated during checkout based on your billing and shipping information."
+msgstr ""

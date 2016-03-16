@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2016-03-14 11:00+0100\n"
+"PO-Revision-Date: 2016-03-15 15:50+0100\n"
 "Language-Team: \n"
 "X-Generator: Poedit 1.8.7\n"
 "Last-Translator: \n"
@@ -22,12 +22,8 @@ msgstr "Hoppsan! Det gick inte att hitta sidan."
 
 # @ _s
 #: 404.php:19
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the links "
-"below or a search?"
-msgstr ""
-"Det verkar som om inget återfanns här. Du vill kanske prova en av länkarna "
-"nedan eller en sökning?"
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "Det verkar som om inget återfanns här. Du vill kanske prova en av länkarna nedan eller en sökning?"
 
 # @ _s
 #: 404.php:27
@@ -320,30 +316,21 @@ msgstr "Inget hittat"
 # @ _s
 #: template-parts/content-none.php:20
 #, php-format
-msgid ""
-"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
 msgstr "Redo att publicera ditt första inlägg? <a href=\"%1$s\">Börja här</a>."
 
 # @ _s
 #: template-parts/content-none.php:24
-msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
-msgstr ""
-"Ingenting matchade dina söktermer. Vänligen försök igen med andra nyckelord."
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Ingenting matchade dina söktermer. Vänligen försök igen med andra nyckelord."
 
 # @ _s
 #: template-parts/content-none.php:29
-msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
-msgstr ""
-"Verkar inte som vi kan hitta vad du letar efter. Kanske en sökning kan "
-"hjälpa."
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "Verkar inte som vi kan hitta vad du letar efter. Kanske en sökning kan hjälpa."
 
 # @ _s
-#: template-parts/content-page.php:19 template-parts/content-single.php:23
-#: template-parts/content.php:32
+#: template-parts/content-page.php:19 template-parts/content-single.php:23 template-parts/content.php:32
 msgid "Pages:"
 msgstr "Sidor:"
 
@@ -381,10 +368,32 @@ msgstr "De främsta naturliga ingredienserna"
 
 # @ _s
 #: template-parts/front-page.php:43
-msgid "What you put on your body is just as important as what you put in it. Indie Lee uses all natural ingredients, carefully selected for it\'s proven effect."
+msgid "What you put on your body is just as important as what you put in it. Indie Lee uses all natural ingredients, carefully selected for it's proven effect."
 msgstr "Vad du använder på din kropp är lika viktigt som det du stoppar i den. Indie Lee använder helt naturliga ingredienser, noggrant utvalda för deras goda effekt."
 
 # @ _s
 #: inc/structure/template-tags.php:68
 msgid "Bestsellers"
-msgstr "Bästsäljare"
+msgstr "Populära produkter"
+
+# @ _s
+#: inc/woocommerce/template-tags.php:107
+msgid "Your order"
+msgstr "Din varukorg"
+
+# @ _s
+#: inc/woocommerce/template-tags.php:107
+msgid "%d item"
+msgid_plural "%d items"
+msgstr[0] "%d vara"
+msgstr[1] "%d varor"
+
+# @ _s
+#: woocommerce/single-product-reviews.php:60
+msgid "Be the first to review"
+msgstr "Var den första att betygsätta"
+
+# @ _s
+#: woocommerce/cart/cart-totals.php:91
+msgid "Note: Shipping and taxes are estimated%s and will be updated during checkout based on your billing and shipping information."
+msgstr "Notera: Frakt är en estimering och kommer bli uppdaterad i kassan beroende på din betalnings- och leveransmetod."

@@ -6,7 +6,14 @@
   +clearfix
   position: relative
   background-color: #D1E9F1
+  background-size: contain
+  background-position: right bottom
+  background-repeat: no-repeat
   margin-bottom: $base-spacing
+
+  // Bottom padding to show the picture under jumbotron text
+  +breakpoint(max-width $medium-screen)
+    padding-bottom: em(200px)
 
   .jumbotron-product
     +span(full)
@@ -14,14 +21,11 @@
 
     +breakpoint($medium-screen)
       +span(7)
-      position: absolute
-      top: 50%
-      transform: translateY(-50%)
-      left: 0
-      padding: $base-spacing*1.5
+      padding: $base-spacing*3 $base-spacing*1.5
 
     +breakpoint($large-screen)
       +span(5)
+      padding: $base-spacing*5.5 $base-spacing*1.5
 
     h3
       @extend h1
@@ -32,17 +36,6 @@
 
       +breakpoint($medium-screen)
         font-size: $h2-font-size
-
-  .jumbotron-image
-
-    +breakpoint($medium-screen)
-      +span(5 last)
-
-    +breakpoint($large-screen)
-      +span(7 last)
-
-    img
-      display: block
 
 .storefront-featured-products
   +clearfix

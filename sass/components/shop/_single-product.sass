@@ -1,5 +1,14 @@
 .single-product
 
+  .single-product-main-content
+    +clearfix
+    border-bottom: $thick-border
+    margin-bottom: $base-spacing
+    padding-bottom: $small-spacing
+
+    +breakpoint($large-screen)
+      position: relative
+
   .summary
     +span(full)
 
@@ -30,33 +39,33 @@
       margin-top: em(4px)
       margin-bottom: 0
 
-  .cart
-    +span(7 of 10 last)
-    margin-bottom: $small-spacing/2
+    .cart
+      +span(7 of 10 last)
+      margin-bottom: $small-spacing/2
 
-    +breakpoint($medium-screen)
-      +span(8 of 10 last)
+      +breakpoint($medium-screen)
+        +span(8 of 10 last)
 
-    .quantity
-      float: left
+      .quantity
+        float: left
 
-      input
-        width: 60px
+        input
+          width: 60px
 
-    input, button
-      height: 45px
+      input, button
+        height: 45px
 
-    button
-      float: left
-      @extend button.inverted
+      button
+        float: left
+        @extend button.inverted
 
-  .product-detail
-    border-bottom: 1px solid $base-border-color
-    margin-bottom: $small-spacing
+    .product-detail
+      border-bottom: 1px solid $base-border-color
+      margin-bottom: $small-spacing
 
-    &:last-child
-      border-bottom: none
-      margin-bottom: 0
+      &:last-child
+        border-bottom: none
+        margin-bottom: 0
 
   .images
     +span(full)
@@ -67,12 +76,23 @@
 
     +breakpoint($large-screen)
       +span(7 last)
+      position: absolute
+      right: 0
+      top: 0
+      height: 100%
 
     img
       max-height: 300px
 
       +breakpoint($medium-screen)
         max-height: none
+
+      +breakpoint($large-screen)
+        position: absolute
+        bottom: 0
+        height: 100%
+        left: 50%
+        transform: translateX(-50%)
 
   .related.products
     +span(full)
@@ -81,9 +101,7 @@
 
 .optional-field-container
   +span(full)
-  border-top: $thick-border
-  padding-top: $base-spacing
-  margin: $base-spacing 0
+  margin-bottom: $base-spacing
 
   .text-content
     +span(full)

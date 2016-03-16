@@ -16,12 +16,26 @@ wc_print_notices();
 do_action( 'woocommerce_before_cart' ); ?>
 
 <form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
-
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 <div class="cart">
 
+	<div class="cart-actions">
+		<?php if ( WC()->cart->coupons_enabled() ) { ?>
+			<div class="coupon">
 
+				<input type="text" name="coupon_code" class="input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" /> <input type="submit" class="button cta" name="apply_coupon" value="<?php esc_attr_e( 'Apply Coupon', 'woocommerce' ); ?>" />
+
+				<?php do_action( 'woocommerce_cart_coupon' ); ?>
+			</div>
+		<?php } ?>
+
+		<input type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update Cart', 'woocommerce' ); ?>" />
+
+		<?php do_action( 'woocommerce_cart_actions' ); ?>
+
+		<?php wp_nonce_field( 'woocommerce-cart' ); ?>
+	</div>
 
 	<div class="cart-header">
 		<div class="product">
@@ -135,7 +149,6 @@ do_action( 'woocommerce_before_cart' ); ?>
 		?>
 
 	</div>
-
 
 
 </div>

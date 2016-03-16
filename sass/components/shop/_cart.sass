@@ -2,6 +2,38 @@
   +clearfix
   text-transform: uppercase
 
+  .cart-actions
+    +clearfix
+    text-align: center
+
+    +breakpoint($medium-screen)
+      text-align: left
+
+    .coupon
+      display: inline-block
+
+      +breakpoint($medium-screen)
+        display: block
+        float: left
+
+      input
+        float: left
+        width: auto
+
+      #coupon_code
+        width: 95px
+
+        +breakpoint($medium-screen)
+          width: auto
+
+    +breakpoint($medium-screen)
+      input[name="update_cart"]
+        float: right
+
+    .button
+      padding-bottom: 14px
+      padding-top: 15px
+
   .cart-header
     display: none
 
