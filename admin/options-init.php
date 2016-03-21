@@ -23,6 +23,7 @@
 
     $args = array(
         'opt_name' => 'indielee',
+        'dev_mode' => false,
         'use_cdn' => TRUE,
         'display_name' => 'Indie Lee Theme',
         'display_version' => FALSE,
