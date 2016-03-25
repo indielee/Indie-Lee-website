@@ -19,6 +19,7 @@ global $indielee;
 </head>
 
 <body <?php body_class(); ?>>
+<?php if ( function_exists( 'gtm4wp_the_gtm_tag' ) ) { gtm4wp_the_gtm_tag(); } ?>
 <div id="page" class="hfeed site">
 	<header id="masthead" class="site-header" role="banner">
 		<header class="pre-header">
