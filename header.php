@@ -23,6 +23,7 @@ global $indielee;
 	<header id="masthead" class="site-header" role="banner">
 		<header class="pre-header">
 			<div>
+				<?php wp_nav_menu( array( 'theme_location' => 'secondary', 'menu_id' => 'Top Menu' ) ); ?>
 				<div class="shipping"><?php echo $indielee['opt-text-shipping']; ?></div>
 			</div>
 		</header>

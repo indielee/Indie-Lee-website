@@ -84,24 +84,38 @@
 
     if( !empty( $ingredient_list ) )
       update_post_meta( $post_id, '_ingredients', esc_html( $ingredient_list ) );
+    else
+      update_post_meta( $post_id, '_ingredients', '' );
 
     if( !empty( $eu_ingredient_list ) )
       update_post_meta( $post_id, '_ingredients_eu', esc_html( $eu_ingredient_list ) );
+    else
+      update_post_meta( $post_id, '_ingredients_eu', '' );
 
     if( !empty( $directions ) )
       update_post_meta( $post_id, '_directions', esc_html( $directions ) );
+    else
+      update_post_meta( $post_id, '_directions', '' );
 
     if( !empty( $optional_field ) )
       update_post_meta( $post_id, '_optional_field', esc_html( $optional_field ) );
+    else
+      update_post_meta( $post_id, '_optional_field', '' );
 
     if( !empty( $main_ingredient_info ) )
       update_post_meta( $post_id, '_main_ingredient_title', esc_html( $main_ingredient_title ) );
+    else
+      update_post_meta( $post_id, '_main_ingredient_title', '' );
 
     if( !empty( $main_ingredient_info ) )
       update_post_meta( $post_id, '_main_ingredient_info', esc_html( $main_ingredient_info ) );
+    else
+      update_post_meta( $post_id, '_main_ingredient_info', '' );
 
     if( !empty( $main_ingredient_info ) )
       update_post_meta( $post_id, '_main_ingredient_image', esc_html( $main_ingredient_image ) );
+    else
+      update_post_meta( $post_id, '_main_ingredient_image', '' );
 
   }
 

@@ -7,11 +7,25 @@
     font-size: $small-font-size
     text-align: center
 
+    ul
+      @extend %no-list-style
+      @extend %horizontal-list
+
+    .menu
+      display: none
+
     +breakpoint($medium-screen)
       text-align: left
 
-      .menu-top-menu-container
+      .menu
+        display: block
+        margin-left: $small-spacing/2
+        border-left: $base-border
+        padding-left: $small-spacing/2
         float: right
+
+        a
+          color: $base-font-color
 
       .shipping
         float: right

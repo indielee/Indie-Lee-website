@@ -10,6 +10,7 @@
 
     hr
       position: relative
+      margin: 0 0 $small-spacing 0
       top: -5px
 
     // create overflowing line on bigger screens
@@ -63,9 +64,10 @@
       img
         margin: 0 auto
         display: block
-
-      +breakpoint(max-width $small-screen)
         max-height: 150px
+
+        +breakpoint($small-screen)
+          max-height: none
 
 
 

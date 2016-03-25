@@ -6,7 +6,7 @@ function indielee_template_custom_field_ingredients() {
 
   if ( ! ( $ingredient_list_eu == null || $ingredient_list_eu == '' ) ) {
     echo '<div class="product-detail" id="ingredients-container">
-          <h3>Ingredients</h3>
+          <h3>' . esc_html__( 'Ingredients', 'indie-lee' ) . '</h3>
             <p>' . $ingredient_list . ' <span id="eu-ingredients-title">Visa INCI-namn</span>' . '</p>
             <div class="eu-compliant-ingredient-list" id="eu-ingredients-list">
               <p>' . $ingredient_list_eu . '</p>
@@ -14,14 +14,14 @@ function indielee_template_custom_field_ingredients() {
           </div>';
   } else {
     echo '<div class="product-detail" id="ingredients-container">
-          <h3>Ingredients</h3>
+          <h3>' . esc_html__( 'Ingredients', 'indie-lee' ) . '</h3>
             <p>' . $ingredient_list . '</p>
           </div>';
   }
 }
 
 function indielee_template_custom_field_directions() {
-  echo '<div class="product-detail">' . '<h3 id="directions-title">Directions</h3>' . '<div id="directions-content"><p>' . get_post_meta( get_the_ID(), '_directions', true ) . '</p></div></div>';
+  echo '<div class="product-detail">' . '<h3 id="directions-title">' . esc_html__( 'Directions', 'indie-lee' ) . '</h3>' . '<div id="directions-content"><p>' . get_post_meta( get_the_ID(), '_directions', true ) . '</p></div></div>';
 }
 
 /**

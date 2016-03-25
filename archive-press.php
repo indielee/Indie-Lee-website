@@ -28,10 +28,11 @@ get_header(); ?>
 
   			<?php
 
-					$paged = ( get_query_var('paged') ) ? get_query_var('paged') : 1;
-					query_posts( $query_string .'&posts_per_page=12&paged=' . $paged );
+					$args = array( 'post_type' => 'Press', 'posts_per_page' => 16, 'orderby' => 'menu_order' );
+					$loop = new WP_Query( $args );
+					while ( $loop->have_posts() ) : $loop->the_post();
 
-					while ( have_posts() ) : the_post(); ?>
+				?>
 
           <div class="press-post">
 

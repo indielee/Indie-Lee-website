@@ -83,15 +83,26 @@ msgstr ""
 msgid "Theme: %1$s by %2$s."
 msgstr ""
 
-#: functions.php:45
+#: functions.php:51
 #: header.php:32
 #@ _s
 msgid "Primary Menu"
 msgstr ""
 
+#: functions.php:52
+#: header.php:32
+#@ _s
+msgid "Top Menu"
+msgstr ""
+
 #: functions.php:100
 #@ _s
 msgid "Sidebar"
+msgstr ""
+
+#: functions.php:232
+#@ _s
+msgid "Read more"
 msgstr ""
 
 #: header.php:23
@@ -401,4 +412,14 @@ msgstr ""
 # @ _s
 #: woocommerce/cart/cart-totals.php:91
 msgid "Note: Shipping and taxes are estimated%s and will be updated during checkout based on your billing and shipping information."
+msgstr ""
+
+# @ _s
+#: inc/woocommerce/template-tags.php:9
+msgid "Ingredients"
+msgstr ""
+
+# @ _s
+#: inc/woocommerce/template-tags.php:24
+msgid "Directions"
 msgstr ""

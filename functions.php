@@ -49,6 +49,7 @@ function indie_lee_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'indie-lee' ),
+		'secondary' => esc_html__( 'Top Menu', 'indie-lee' ),
 		'policies' => esc_html__( 'T&Cs Menu', 'indie-lee' ),
 	) );
 
@@ -105,6 +106,7 @@ function create_post_type() {
 		'public' => true,
 		'has_archive' => true,
 		'supports' => array( 'title', 'editor', 'thumbnail', 'page-attributes' ),
+		'hierarchical' => false,
 		'rewrite' => array("slug" => "press")
 	);
 	register_post_type('press',$args);
@@ -229,7 +231,7 @@ add_filter( 'excerpt_length', 'indie_lee_excerpt_length', 999 );
 function indie_lee_excerpt_more($more) {
 	return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
     get_permalink( get_the_ID() ),
-    __( 'Read More', 'textdomain' )
+    __( 'Read more', 'indie-lee' )
   );
 }
 add_filter('excerpt_more', 'indie_lee_excerpt_more', 21 );
