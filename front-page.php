@@ -9,8 +9,8 @@ get_header(); ?>
       <section class="jumbotron" style="background-image:url('/wp-content/uploads/2016/03/aging-kit.jpg')">
 
         <div class="jumbotron-product">
-          <h3>Defy Age Naturally</h3>
-          <p>Roseship Cleanser, Swiss Apple Facial Serum &amp; Squalane Facial Cream</p>
+          <h3>Ekologiska hudvårds&shy;produkter</h3>
+          <p>Indie Lees produkter består av helt naturliga ingredienser, noggrant utvalda för deras goda effekt.</p>
           <a href="/shop" class="button inverted">Gå till butiken</a>
         </div>
 

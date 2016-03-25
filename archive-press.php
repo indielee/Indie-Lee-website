@@ -28,7 +28,7 @@ get_header(); ?>
 
   			<?php
 
-					$args = array( 'post_type' => 'Press', 'posts_per_page' => 16, 'orderby' => 'menu_order' );
+					$args = array( 'post_type' => 'Press', 'posts_per_page' => -1, 'orderby' => 'menu_order' );
 					$loop = new WP_Query( $args );
 					while ( $loop->have_posts() ) : $loop->the_post();
 
@@ -49,8 +49,6 @@ get_header(); ?>
 
   			<?php endwhile; ?>
       </div>
-
-			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 
