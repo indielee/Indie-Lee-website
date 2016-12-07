@@ -15,10 +15,11 @@ wc_print_notices();
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-<form action="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" method="post">
+<form action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+
 <?php do_action( 'woocommerce_before_cart_table' ); ?>
 
-<div class="cart">
+<div class="cart shop_table">
 
 	<div class="cart-actions">
 		<?php if ( WC()->cart->coupons_enabled() ) { ?>
